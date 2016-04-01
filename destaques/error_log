@@ -1,0 +1,10 @@
+[10-Feb-2015 18:50:26 America/Sao_Paulo] PHP Warning:  include(/home/futuroc2/public_html/web/script.php): failed to open stream: No such file or directory in /home/futuroc2/public_html/destaques/index.php on line 6
+[10-Feb-2015 18:50:26 America/Sao_Paulo] PHP Warning:  include(): Failed opening '/home/futuroc2/public_html/web/script.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/futuroc2/public_html/destaques/index.php on line 6
+[10-Feb-2015 18:50:26 America/Sao_Paulo] PHP Warning:  include(/home/futuroc2/public_html/web/header.php): failed to open stream: No such file or directory in /home/futuroc2/public_html/destaques/index.php on line 7
+[10-Feb-2015 18:50:26 America/Sao_Paulo] PHP Warning:  include(): Failed opening '/home/futuroc2/public_html/web/header.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/futuroc2/public_html/destaques/index.php on line 7
+[10-Feb-2015 18:50:26 America/Sao_Paulo] PHP Warning:  mysql_query(): Access denied for user 'futuroc2'@'localhost' (using password: NO) in /home/futuroc2/public_html/destaques/index.php on line 9
+[10-Feb-2015 18:50:26 America/Sao_Paulo] PHP Warning:  mysql_query(): A link to the server could not be established in /home/futuroc2/public_html/destaques/index.php on line 9
+[10-Feb-2015 18:50:26 America/Sao_Paulo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/futuroc2/public_html/destaques/index.php on line 68
+[10-Feb-2015 18:50:26 America/Sao_Paulo] PHP Warning:  include(/home/futuroc2/public_html/web/footer.php): failed to open stream: No such file or directory in /home/futuroc2/public_html/destaques/index.php on line 133
+[10-Feb-2015 18:50:26 America/Sao_Paulo] PHP Warning:  include(): Failed opening '/home/futuroc2/public_html/web/footer.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/futuroc2/public_html/destaques/index.php on line 133
+[10-Feb-2015 19:29:40 America/Sao_Paulo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/futuroc2/public_html/destaques/index.php on line 113

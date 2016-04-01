@@ -1,0 +1,32 @@
+.hover-zoom {
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    -moz-transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+    transform: scale(1,1);
+    background-size: cover;
+    z-index: -1;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.hover-zoom:hover{
+    -moz-transform: scale(1.04,1.04);
+    -webkit-transform: scale(1.04,1.04);
+    transform: scale(1.04,1.04);
+}
+
+.destaques-texto {
+
+}
+
+.hover-text {
+    color: #ffffff;
+    transition: color .4s;
+}
+
+.hover-text:hover {
+    color: #ff6600;
+}

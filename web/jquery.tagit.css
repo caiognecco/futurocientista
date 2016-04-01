@@ -1,0 +1,105 @@
+
+
+.bootstrap-tagsinput {
+  background-color: #fff;
+  color: black;
+  display: inline-block;
+  padding: 0px 2%;
+  vertical-align: middle;
+  width: 96%;
+  cursor: text;
+  text-align: left;
+  outline: #666666;
+  height: 2em;
+
+
+}
+
+
+
+
+.ui-autocomplete {
+    
+
+position: relative;
+z-index: 1; 
+width: 96%;
+float: left;
+color: #ff6600;
+background: black;
+list-style: none outside none;
+padding: 1%;
+margin: 1%;
+  overflow: scroll;
+
+}
+li{
+    width: 50%;
+    float: left;
+}
+
+.ui-autocomplete li:hover, .ui-autocomplete li:focus, .ui-autocomplete li:active{
+    background: #ff6600;
+    color: black;
+    cursor: pointer;
+}
+
+
+.ui-menu .ui-menu-item a.ui-corner-all:hover, .ui-menu .ui-menu-item a.ui-corner-all:focus, .ui-menu .ui-menu-item a.ui-corner-all:active {
+    width: 100%;
+    background:#ff6600!important;
+    color: black;
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+    width: 100%;
+    background: #ff6600;
+    color: black;
+}
+
+.bootstrap-tagsinput:hover{
+    background: black;
+    color: #ff6600;
+    outline: #666666;
+
+}
+
+.bootstrap-tagsinput input[type=text]{
+    width: auto;
+    background: transparent;
+    outline: 0;
+    border: none;
+}
+.bootstrap-tagsinput input[type=text]:hover{
+    outline: 0;
+    border: none;
+}
+
+
+
+.bootstrap-tagsinput .tag {
+  margin-right: 2px;
+  color: black;
+  background: #ff6600;
+  padding: 0px 3px;
+}
+.bootstrap-tagsinput .tag [data-role="remove"] {
+  margin-left: 8px;
+  cursor: pointer;
+  color: black;
+}
+.bootstrap-tagsinput .tag [data-role="remove"]:after {
+  content: "x";
+  padding: 0px 2px;
+}
+.bootstrap-tagsinput .tag [data-role="remove"]:hover {
+  color: red;
+}
+
+.bootstrap-tagsinput .tag .label{
+
+}
+
+.bootstrap-tagsinput .tag .label .label-info{
+    
+}

@@ -1,0 +1,1 @@
+[10-Feb-2015 19:30:01 America/Sao_Paulo] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/futuroc2/public_html/destaques/publicacao/index.php on line 28
