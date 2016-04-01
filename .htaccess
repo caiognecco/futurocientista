@@ -1,0 +1,34 @@
+RewriteEngine On
+Options All -Indexes
+
+DirectoryIndex index.php
+ErrorDocument 404 /erro404/index.php
+
+RewriteRule ^(.*)\$;   index.php?p=$1 [L]
+RewriteRule ^destaques/noticia/([A-Za-z0-9-]+)/?$ destaques/noticia/index.php?p=$1 [L]
+RewriteRule ^destaques/evento/([A-Za-z0-9-]+)/?$ destaques/evento/index.php?p=$1 [L]
+RewriteRule ^destaques/publicacao/([A-Za-z0-9-]+)/?$ destaques/publicacao/index.php?p=$1 [L]
+RewriteRule ^destaques/guia_do_vestibulando/([A-Za-z0-9-]+)/?$ destaques/guia_do_vestibulando/index.php?p=$1 [L]
+RewriteRule ^sistema/alunos/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ sistema/alunos/index.php?p=$1&r=$2 [L]
+
+RewriteRule ^sistema/cls/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ sistema/cls/index.php?p=$1&r=$2 [L]
+
+RewriteRule ^sistema/clubes/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ sistema/clubes/index.php?p=$1&r=$2 [L]
+
+RewriteRule ^sistema/conteudo_ead/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ sistema/conteudo_ead/index.php?p=$1&r=$2 [L]
+
+RewriteRule ^sistema/equipe/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ sistema/equipe/index.php?p=$1&r=$2 [L]
+
+RewriteRule ^sistema/nucleos/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ sistema/nucleos/index.php?p=$1&r=$2 [L]
+
+RewriteRule ^sistema/eventos/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ sistema/eventos/index.php?p=$1&r=$2 [L]
+
+RewriteRule ^sistema/noticias/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ sistema/noticias/index.php?p=$1&r=$2 [L]
+
+RewriteRule ^sistema/parceiros/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ sistema/parceiros/index.php?p=$1&r=$2 [L]
+
+RewriteRule ^sistema/projetos/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ sistema/projetos/index.php?p=$1&r=$2 [L]
+
+RewriteRule ^sistema/publicacoes/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ sistema/publicacoes/index.php?p=$1&r=$2 [L]
+
+RewriteRule ^sistema/vestibulares/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ sistema/vestibulares/index.php?p=$1&r=$2 [L]
