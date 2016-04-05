@@ -2,7 +2,7 @@
 
 include '../../web/seguranca.php';
 
-$query = "SELECT *, tc.id_conteudo, count(*) FROM conteudo as c, tema_conteudo as tc WHERE tc.id_conteudo = c.id_conteudo ";
+$query = "SELECT *, tc.id_conteudo, count(*) FROM conteudo as c, tema_conteudo as tc, tipo_conteudo as tipc WHERE tc.id_conteudo = c.id_conteudo AND c.id_tipo = tipc.id_tipo ";
 
 if (isset($_POST['tipo']) && !empty($_POST["tipo"]))
     $query .= "AND c.id_tipo = '" . $_POST['tipo'] . "' ";
@@ -35,12 +35,12 @@ if (mysql_num_rows($result) != 0 && (!empty($_POST['titulo_input']) || !empty($_
     while ($res = mysql_fetch_array($result)) {
         $query_tag = 'SELECT t.nome from temas as t inner join tema_conteudo as t_c on t.tema = t_c.tema where t_c.id_conteudo = "' . $res['id_conteudo'] . '"';
         $result_tag = mysql_query($query_tag);
-        echo '<div class="resultado" onclick="document.location=\'' . $res['id_tipo'] . '/' . $res["id_conteudo"] . '\'" onclick="" ><div class="resultado_titulo" >';
-        echo $res["titulo"];
+        echo '<div class="resultado" onclick="document.location=\'' . $res['id_tipo'] . '/' . $res["id_conteudo"] . '\'" onclick="" ><div class="resultado_titulo" style="background: '.$res['cor'].';" >';
+        echo $res['nome'].' <i class="fa fa-angle-double-right fa-1x"></i> '.$res["titulo"];
         echo ' </div>';
         echo ' <div class="resultado_tag_container">';
         while ($res_tags = mysql_fetch_assoc($result_tag)) {
-            echo '<div class="resultado_tag"><i class="fa fa-caret-right fa-1x" style="color: white;"></i> ';
+            echo '<div class="resultado_tag"><i class="fa fa-caret-right fa-1x" style="color: #ff6600;"></i> ';
             echo $res_tags['nome'];
             echo '</div>';
         }

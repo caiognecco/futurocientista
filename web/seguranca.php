@@ -1,5 +1,5 @@
 <?php
-$root_html = '/futurocientista/';
+$root_html = '/fc/';
 header('Content-Type: text/html; charset=UTF-8');
 //  Configurações do Script
 // ==============================

@@ -31,7 +31,7 @@ include '../../web/header.php';
         <br>
         <span style="color: #ff6600; margin-left: auto; margin-right:auto; font-size: 1em;">Desculpe o transtorno</span>
 
-    <table style="display:none; width: 90%; margin-left: auto; margin-right: auto; background: #333; color: white; border: 0.2em solid white; margin-top: 2em; margin-bottom: 2em;">
+    <table style="display:block; width: 90%; margin-left: auto; margin-right: auto; background: #333; color: white; border: 0.2em solid white; margin-top: 2em; margin-bottom: 2em;">
         <tbody>
             <tr>
                 <td style="line-height: 2em; font-weight: bolder; color: #333; background-color: #999; border: 1px solid #000; text-align: center">
