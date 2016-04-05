@@ -15,7 +15,13 @@ RewriteRule ^sistema/cls/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ sistema/cls/index.ph
 
 RewriteRule ^sistema/clubes/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ sistema/clubes/index.php?p=$1&r=$2 [L]
 
-RewriteRule ^sistema/conteudo_ead/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ sistema/conteudo_ead/index.php?p=$1&r=$2 [L]
+RewriteRule ^sistema/conteudo/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ sistema/conteudo/index.php?p=$1&r=$2 [L]
+
+RewriteRule ^conteudo/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ conteudo/index.php?p=$1&r=$2 [L]
+
+RewriteRule ^sistema/conteudo/([A-Za-z0-9-]+)/?$ sistema/conteudo/index.php?p=$1[L]
+
+RewriteRule ^conteudo/([A-Za-z0-9-]+)/?$ conteudo/index.php?p=$1 [L]
 
 RewriteRule ^sistema/equipe/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ sistema/equipe/index.php?p=$1&r=$2 [L]
 
