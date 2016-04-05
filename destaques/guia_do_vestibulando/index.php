@@ -27,7 +27,7 @@ include '../../web/header.php';
         </div>
     </div> <!-- MENU DESTAQUES -->
 
-        <span style="color: #ff6600; margin-left: auto; margin-right: auto; font-size: 1.5em;"><i class='fa fa-graduation-cap fa-3x '></i><br>Em Construção</span>
+        <span style="color: #ff6600; margin-left: auto; margin-right: auto; font-size: 1.5em;"><i class='fa fa-graduation-cap fa-3x '></i><br>Nenhum edital lançado em 2016</span>
         <br>
         <span style="color: #ff6600; margin-left: auto; margin-right:auto; font-size: 1em;">Desculpe o transtorno</span>
 

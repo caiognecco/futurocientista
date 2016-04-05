@@ -4,11 +4,11 @@ include '../../web/seguranca.php';
 
 $query = "SELECT * FROM usuario AS u, escola AS e WHERE u.id_escola = e.id_escola AND u.h = 1 ";
 if (isset($_POST['nome']))
-    $query .= "AND u.nome LIKE '". htmlentities ($_POST['nome'])."%' ";
+    $query .= "AND u.nome LIKE '". $_POST['nome']."%' ";
 if ($_POST['cidade'] != 'null')
     $query .= "AND e.cidade LIKE '". htmlentities($_POST['cidade'])."' ";
 if (isset($_POST['escola']) && $_POST['escola'] != 'todas')
-    $query .= "AND u.id_escola LIKE '". htmlentities ($_POST['escola'])."' ";
+    $query .= "AND u.id_escola LIKE '". $_POST['escola']."' ";
 
 
 $query .= "ORDER BY e.cidade, e.nome_escola, u.nome";

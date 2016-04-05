@@ -18,7 +18,7 @@ include '../web/header.php';
 
 <div style="margin-bottom: 5%; overflow: hidden;" id="corpo">
 
-    <div class="slider">
+    <div style="display: none;" class="slider">
         <div>
             <div id="player"></div>
            <!-- <script>
@@ -98,7 +98,7 @@ include '../web/header.php';
                 function stopVideo() {
                     player.stopVideo();
                 }
-            </script> -->
+            </script>
             <script>
                 // 2. This code loads the IFrame Player API code asynchronously.
                 var tag = document.createElement('script');
@@ -126,7 +126,7 @@ include '../web/header.php';
                 //    The function indicates that when playing a video (state=1),
 
                 function onPlayerReady(event){
-                    event.target.playVideo();
+                    event.target.playVideo1();
                 }
 
                 function onPlayerStateChange(event) {
@@ -150,7 +150,7 @@ include '../web/header.php';
                 function stopVideo() {
                     player.stopVideo();
                 }
-            </script>
+            </script>-->
         </div>
 
     </div>
@@ -303,36 +303,36 @@ include '../web/header.php';
         </div>
     </div> <!-- ===== REALIZAÇAO ===== -->
 
-    <div style="width: 37%; height: 5%; float: left;">
-        <li style="height: 1px; width: 100%; background-color: #000; margin-top: 2.5%;"></li>
-    </div> <!-- ===== Espaço height 5% ===== -->
+           <!-- <div style="width: 37%; height: 5%; float: left;">
+				<li style="height: 1px; width: 100%; background-color: #000; margin-top: 2.5%;"></li>
+			</div>
 
-    <div align="center" style="width: 97%;">
-        <span style="font-size:1.3em; color:#ff6600; text-align: center;margin-left: 0%;"> <i style="color: red;" class="fa fa-youtube fa-1x"></i> Videos</span>
-    </div>
+			<div align="center" style="width: 97%;">
+				<span style="font-size:1.3em; color:#ff6600; text-align: center;margin-left: 0%;"> <i style="color: red;" class="fa fa-youtube fa-1x"></i> Videos</span>
+			</div>
 
-    <div class="slider" style="margin-left: auto; margin-right: auto; width: 37%; height: 40%; float: left;">
-        <div>
-            <iframe width="70%" height="90%" src="https://www.youtube.com/embed/lc636bogz1Y?version=3&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-        </div>
+			<div class="slider" style="display: none; margin-left: auto; margin-right: auto; width: 37%; height: 40%; float: left;">
+				<div>
+					<iframe width="70%" height="90%" src="https://www.youtube.com/embed/lc636bogz1Y?version=3&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+				</div>
 
-         <div>
-            <iframe width="70%" height="90%" src="https://www.youtube.com/embed/87KsGnyfK0Y?version=3&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-        </div>
+				 <div>
+					<iframe width="70%" height="90%" src="https://www.youtube.com/embed/87KsGnyfK0Y?version=3&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+				</div>
 
-        <div>
-            <iframe width="70%" height="90%" src="https://www.youtube.com/embed/naOQ2PR4e4s?version=3&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-        </div>
+				<div>
+					<iframe width="70%" height="90%" src="https://www.youtube.com/embed/naOQ2PR4e4s?version=3&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+				</div>
 
-        <div>
-            <iframe width="70%" height="90%" src="https://www.youtube.com/embed/lrQDcD_sMDw?version=3&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-        </div>
+				<div>
+					<iframe width="70%" height="90%" src="https://www.youtube.com/embed/lrQDcD_sMDw?version=3&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+				</div>
 
-        <div>
-            <iframe width="70%" height="90%" src="https://www.youtube.com/embed/fBG6XBIc8H4?version=3&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-        </div>
+				<div>
+					<iframe width="70%" height="90%" src="https://www.youtube.com/embed/fBG6XBIc8H4?version=3&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+				</div>
 
-    </div> <!-- ===== VIDEOS ===== -->
+			</div> --> <!-- ===== VIDEOS ===== -->
 
     <div style="width: 37%; height: 5%; float: left;">
         <li style="height: 1px; width: 100%; background-color: #000; margin-top: 2.5%; margin-bottom: 2.5%;"></li>
@@ -374,7 +374,7 @@ include '../web/header.php';
 
     <div id="destaques_sobre" style="width: 37%; border-bottom: 0.15em white solid; margin-top: 2em; overflow: hidden;">
         <div style="width: 100%; height: 10%; padding-top: 2%; font-size: 1.2em; margin-left: 0;">
-            <button onclick=location.href="<?php echo $root_html ?>destaques/blog/" style="background: #ff6600; color:white;" class="blog"> <i class='fa fa-rss fa-1x'></i> Blog</button> |
+           <!-- <button onclick=location.href="<?php echo $root_html ?>destaques/blog/" style="background: #ff6600; color:white;" class="blog"> <i class='fa fa-rss fa-1x'></i> Blog</button> | -->
             <button onclick=location.href="<?php echo $root_html ?>destaques/noticia/" style="background: #ff6600; color:white;" class="noticias"><i class='fa fa-newspaper-o fa-1x '></i> Noticias</button> |
             <button onclick=location.href="<?php echo $root_html ?>destaques/evento/" style="background: #ff6600; color:white;" class="eventos_destaque"><i class='fa fa-calendar-o fa-1x '></i> Eventos</button> |
             <button onclick=location.href="<?php echo $root_html ?>destaques/publicacao/" style="background: #ff6600; color:white;" class="publicacoes"><i class='fa fa-book fa-1x '></i> Publicações</button> |

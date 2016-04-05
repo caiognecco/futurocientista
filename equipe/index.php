@@ -16,7 +16,7 @@ include '../web/header.php';
 </div>
 
 
-<div id="corpo">
+<div id="corpo" style="width: 100%; height: 70%;">
     
     <div id="menuEquipe">
         <div class="h-1-7 ativo" onclick="show1();  $('.ativo').toggleClass('ativo'); $(this).toggleClass('ativo')">
