@@ -413,6 +413,19 @@
                             $("#menu2_titulo").html('<span style="display:inline-block; vertical-align:middle"><i class="fa fa-arrow-circle-down fa-1x "></i> Role para baixo para ver mais conteúdo!</span>');
                         });
 
+                        $("#plano_de_vida").mouseover(function () {
+                            $("#menu2_titulo").css('background', '#3b5998');
+                            $("#menu2_titulo").css('color', 'white');
+                            $("#menu2_titulo").html('<span style="display:inline-block; vertical-align:middle"><i  id="icoParceiro"  class="fa  fa-smile-o fa-1x"></i> Plano de vida: conheça nosso plano de vida para os alunos do P.F.C.</span>');
+
+                        });
+
+                        $("#plano_de_vida").mouseleave(function () {
+                            $("#menu2_titulo").css('background', 'black');
+                            $("#menu2_titulo").css('color', '#ff6600');
+                            $("#menu2_titulo").html('<span style="display:inline-block; vertical-align:middle"><i class="fa fa-arrow-circle-down fa-1x "></i> Role para baixo para ver mais conteúdo!</span>');
+                        });
+
                         $(".youtube_titulo_corpo").mouseover(function () {
                             $(".youtube_titulo_corpo").css('background', 'white');
                             $(".youtube_titulo_corpo").css('color', 'red');
@@ -572,6 +585,30 @@
 
                         });
 
+                        $(".sobre_inicio2").mouseover(function () {
+                            $(".sobre_inicio2").css("background", "white");
+                            $(".sobre_inicio2").css("color", "#ff6600");
+                            $("#menu2_titulo").css('background', '#ff6600');
+                            $("#menu2_titulo").css('color', 'white');
+                            $("#menu2_titulo").html('<span style="display:inline-block; vertical-align:middle"><i class="fa fa-file-text-o fa-1x "></i> Sobre : conhe&ccedil;a os objetivos do P.F.C. e o que fazemos para alcan&ccedil;&aacute;-los!</span>');
+
+                        });
+
+
+
+                        $(".sobre_inicio2").click(function () {
+                            window.location = '<?php echo $root_html ?>sobre';
+                        });
+
+                        $(".sobre_inicio2").mouseout(function () {
+                            $(".sobre_inicio2").css("background", "white");
+                            $(".sobre_inicio2").css("color", "#ff6600");
+                            $("#menu2_titulo").css('background', 'black');
+                            $("#menu2_titulo").css('color', '#ff6600');
+                            $("#menu2_titulo").html('<span style="display:inline-block; vertical-align:middle"><i class="fa fa-arrow-circle-down fa-1x "></i> Role para baixo para ver mais conteúdo!</span>');
+
+                        });
+
                         $(".equipe").click(function () {
                             window.location = '<?php echo $root_html ?>equipe';
                         });
@@ -693,31 +730,31 @@
                             $("#menu2_titulo").css('color', '#ff6600');
                             $("#menu2_titulo").html('<span style="display:inline-block; vertical-align:middle"><i class="fa fa-arrow-circle-down fa-1x "></i> Role para baixo para ver mais conteúdo!</span>');
                         });
-                        $("#login_email").mouseover(function () {
+                        $(".login_email").mouseover(function () {
                             $(".sistema").css("background", "white");
                             $(".sistema").css("color", "#ff6600");
-                            $("#login-email").css("border", "1px solid #ff6600");
+                            $(".login-email").css("border", "1px solid #ff6600");
                             $("#menu2_titulo").css('background', '#ff6600');
                             $("#menu2_titulo").css('color', 'black');
                             $("#menu2_titulo").html('<span style="display:inline-block; vertical-align:middle"><i class="fa fa-gear fa-1x "></i> Digite seu e-mail para acessar o Sistema EAD. </span>');
                         });
-                        $("#login_email").mouseout(function () {
+                        $(".login_email").mouseout(function () {
                             $(".sistema").css("background", "black");
                             $(".sistema").css("color", "#ff6600");
-                            $("#login-email").css("border", "1px solid white");
+                            $(".login-email").css("border", "1px solid white");
                             $("#menu2_titulo").css('background', 'black');
                             $("#menu2_titulo").css('color', '#ff6600');
                             $("#menu2_titulo").html('<span style="display:inline-block; vertical-align:middle"><i class="fa fa-arrow-circle-down fa-1x "></i> Role para baixo para ver mais conteúdo!</span>');
                         });
 
-                        $("#login_senha").mouseover(function () {
+                        $(".login_senha").mouseover(function () {
                             $(".sistema").css("background", "white");
                             $(".sistema").css("color", "#ff6600");
                             $("#menu2_titulo").css('background', '#ff6600');
                             $("#menu2_titulo").css('color', 'black');
                             $("#menu2_titulo").html('<span style="display:inline-block; vertical-align:middle"><i class="fa fa-gear fa-1x "></i> Digite sua senha para acessar o Sistema EAD. </span>');
                         });
-                        $("#login_senha").mouseout(function () {
+                        $(".login_senha").mouseout(function () {
                             $(".sistema").css("background", "black");
                             $(".sistema").css("color", "#ff6600");
                             $("#menu2_titulo").css('background', 'black');
@@ -725,14 +762,14 @@
                             $("#menu2_titulo").html('<span style="display:inline-block; vertical-align:middle"><i class="fa fa-arrow-circle-down fa-1x "></i> Role para baixo para ver mais conteúdo!</span>');
                         });
 
-                        $("#login_submit").mouseover(function () {
+                        $(".login_submit").mouseover(function () {
                             $(".sistema").css("background", "white");
                             $(".sistema").css("color", "#ff6600");
                             $("#menu2_titulo").css('background', '#ff6600');
                             $("#menu2_titulo").css('color', 'black');
                             $("#menu2_titulo").html('<span style="display:inline-block; vertical-align:middle"><i class="fa fa-gear fa-1x "></i> Clique aqui para acessar o Sistema EAD.</span>');
                         });
-                        $("#login_submit").mouseout(function () {
+                        $(".login_submit").mouseout(function () {
                             $(".sistema").css("background", "black");
                             $(".sistema").css("color", "#ff6600");
                             $("#menu2_titulo").css('background', 'black');

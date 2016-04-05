@@ -1,4 +1,11 @@
 <?php if (!$mobile): ?>
+    <style>
+        a {
+            color: #ff6600;
+        }
+    </style>
+
+
 <div class="parceiros_menu1" style="width: 100%; height: 6%; float: left;">
     <div class="container">
         <span style="display:inline-block; vertical-align:middle"> Agradecemos muito a todos os Parceiros que acreditam no PFC! <i class="fa fa-smile-o fa-1x"></i> </span>
@@ -113,14 +120,10 @@
              | <i class="fa fa-phone fa-1x"></i> (15)3229-8840 | <i class="fa fa-envelope fa-1x"></i> contato@futucientista.net 
            </span>
         </div>
- <div id="footer_inicio2" style="width: 100%; float: left; height: 16.5%; background: lightgray; color: #ff6600; font-size: 1.1em; padding-top: .4%;">
-        <span>
-            <i class="fa fa-code fa-1x"></i> Desenvolvedor do Projeto e Sistema:
-            Caio Perroni Gnecco | <i class="fa fa-phone fa-1x"></i> (15)98126-3628 | <i class="fa fa-envelope fa-1x"></i> caiognecco@gmail.com <br>
-            		<div style="width: 100%; padding-top: .5%; padding-bottom: .5%;">
-                        <li style="height: 1px; width: 100%; background-color: #ffffff; margin-top: 0%;"></li>
-                    </div>
-            <i class="fa fa-code fa-1x"></i> Desenvolvedor Front-End: Bernardo Pinheiro Camargo | <i class="fa fa-phone fa-1x"></i> (16)98100-4626 | <i class="fa fa-envelope fa-1x"></i> bernardopcamargo@gmail.com
+ <div id="footer_inicio2" style="width: 100%; float: left; height: 8%; background: lightgray; color: #ff6600; font-size: 1.1em; padding-bottom: 3%;" class="container">
+        <span style="display: inline-block; vertical-align: middle;">
+            <i class="fa fa-code fa-1x"></i> Site e Sistema desenvolvidos por:
+            <a target="_blank" href="https://br.linkedin.com/in/caio-perroni-gnecco-5908a260">Caio Perroni Gnecco</a> | <a href="mailto:bernardopcamargo@gmail.com">Bernardo Pinheiro Camargo</a>
         </span>
  </div>
 <div style="height: 6%; width: 100%;"></div>

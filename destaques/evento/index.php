@@ -40,7 +40,7 @@ include '../../web/header.php';
 
     <div id="destaques_sobre" style="height:13%; width: 100%; border-bottom: 0.15em white solid; margin-top: 1%;">
         <div style="width: 100%; height: 10%; padding-top: 1%; font-size: 1.7em; margin-left: 0;">
-            <button onclick=location.href="<?php echo $root_html ?>destaques/blog/" style="background: #ff6600; color:white;" class="blog"> <i class='fa fa-rss fa-1x'></i> Blog</button> |
+          <!--  <button onclick=location.href="<?php echo $root_html ?>destaques/blog/" style="background: #ff6600; color:white;" class="blog"> <i class='fa fa-rss fa-1x'></i> Blog</button> | -->
             <button onclick=location.href="<?php echo $root_html ?>destaques/noticia/" style="background: #ff6600; color: white;" class="noticias"><i class='fa fa-newspaper-o fa-1x '></i> Noticias</button> |
             <button onclick=location.href="<?php echo $root_html ?>destaques/evento/" style="background: white; color: #ff6600;" class=""><i class='fa fa-calendar-o fa-1x '></i> Eventos</button> |
             <button onclick=location.href="<?php echo $root_html ?>destaques/publicacao/" style="background: #ff6600; color:white;" class="publicacoes"><i class='fa fa-book fa-1x '></i> Publicações</button> |

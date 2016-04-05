@@ -1,8 +1,7 @@
 <?php
 $titulo = 'Programa Futuro Cientista®';
-$descricao = 'Site oficial do Programa Futuro Cientista. Desenvolvido por Caio Perroni Gnecco e Bernardo Pinheiro Camargo.';
+$descricao = 'Site oficial do Programa Futuro Cientista.';
 $img = 'facebook';
-
 
 include 'web/seguranca.php';
 include 'web/script.php';
@@ -129,7 +128,7 @@ include 'web/header.php';
 
     <div id="destaques_corpo" style="border-bottom: 0.15em white solid; overflow: hidden;">
         <div style="width: 100%; height: 10%; padding-top: 2%; font-size: 1.5em;  ">
-            <button onclick=location.href="<?php echo $root_html ?>destaques/blog/" style="background: #ff6600; color:white;" class="blog"> <i class='fa fa-rss fa-1x'></i> Blog</button> |
+          <!--  <button onclick=location.href="<?php echo $root_html ?>destaques/blog/" style="background: #ff6600; color:white;" class="blog"> <i class='fa fa-rss fa-1x'></i> Blog</button> | -->
             <button onclick=location.href="<?php echo $root_html ?>destaques/noticia/" style="background: #ff6600; color:white;" class="noticias"><i class='fa fa-newspaper-o fa-1x '></i> Noticias</button> |
             <button onclick=location.href="<?php echo $root_html ?>destaques/evento/" style="background: #ff6600; color:white;" class="eventos_destaque"><i class='fa fa-calendar-o fa-1x '></i> Eventos</button> |
             <button onclick=location.href="<?php echo $root_html ?>destaques/publicacao/" style="background: #ff6600; color:white;" class="publicacoes"><i class='fa fa-book fa-1x '></i> Publicações</button> |
@@ -175,7 +174,7 @@ include 'web/header.php';
             <span style="display:inline-block; vertical-align:middle"> <i  id="icoYoutube"  class="fa fa-map-marker fa-1x"></i> Rede de N&uacute;cleos </span>
         </div>
         <div id="rede_frame_corpo">
-            <div id="map-canvas" style="width: 85%; height: 100%; overflow: hidden; margin-left: auto; margin-right: auto;"></div>
+            <div id="map-canvas" style="width: 100%; height: 100%; overflow: hidden; margin-left: auto; margin-right: auto;"></div>
         </div>
     </div>
 
@@ -213,8 +212,8 @@ include 'web/header.php';
     <div  class="conteudo_ead_corpo" style="float: left; width: 59.9%; height: 63%;  background: lightgray; color: #ff6600; border-bottom: 0.15em white solid;">
     </div>
 
-    <div id="ajude_corpo" style="float: right; width: 39.9%; height: 63%;  color: #ff6600; border-bottom: 0.15em white solid;">
-        <div class="hover" id="pessoa_juridica">
+    <div id="ajude_corpo" style="float: right; width: 39.9%; height: 63%;  color: #ff6600; border-bottom: 0.15em white solid; overflow: hidden;">
+       <!-- <div class="hover" id="pessoa_juridica">
             <div class="container" id="pessoa_juridica_inicial">
                     <span style="display:inline-block; vertical-align:middle">
 
@@ -299,7 +298,11 @@ include 'web/header.php';
                     </span>
             </div>
 
-        </div>
+        </div> -->
+
+        <span style="position: relative; top: 5%; font-size: 1.3em; margin-left: auto; margin-right: auto;">Sua solidariedade é nosso combustível !</span>
+
+        <img src="img/ajude_index.jpg" width="70%" alt="" style="position: relative; top: 5%; margin-left: auto; margin-right: auto;">
     </div>
 
     <script type="text/javascript" language="JavaScript">
@@ -526,7 +529,7 @@ include 'web/header.php';
         </div>
     </div>
 
-    <div  class="contato_corpo" style="float: right; width: 39.9%; height: 63%;  color: #ff6600; border-bottom: 0.15em white solid; margin-left: auto; margin-right: auto;">
+    <div  class="contato_corpo" style="float: right; width: 39.9%; height: 63%;  color: #ff6600; border-bottom: 0.15em white solid; margin-left: auto; margin-right: auto; padding-top: 2em; background-color: lightgray;">
         <form style="float: left; width: 93%; height: 100%;" class="formulario"  action="contato/mail.php" method="post">
 
             <select name="tipo"  required>
@@ -551,8 +554,20 @@ include 'web/header.php';
 
         </div>
     </div>
-    <div class="sistema_corpo" style="width: 100%; height: 30%; float: left; border-bottom: 0.15em white solid; "> 
 
+
+    <div class="sistema_corpo" style="background: lightgray; width: 100%; height: 30%; float: left; border-bottom: 0.15em white solid; ">
+        <form class="formulario" style=" padding: 0; box-shadow: none; height: 50%; width: 100%; background: transparent; color: white;" id="form" action="sistema/login.php" method="post">
+
+            <br><br>
+            <input class="login_email" style="width: 25%; height: 1.5em; border-radius: 0.3em; padding-left: 0.2em; font-size: 1em;" type="text" name="email" placeholder="Email (nome@exemplo.com)" required="required">
+            <br><br>
+
+            <input class="login_senha"  style="width: 25%; height: 1.5em; border-radius: 0.3em; padding-left: 0.2em; font-size: 1em " type="password" name="senha" maxlength=10 pattern="^.{6,10}$" placeholder="Senha" required="required">
+            <br><br>
+
+            <button class="login_submit" style="height: 1.5em; font-size: 1em " type="submit"><i class="fa fa-send fa-1x"></i> Entrar</button>
+        </form>
     </div>
 
 
@@ -566,15 +581,19 @@ include 'web/footer.php';
 
         <style>
             #animation{
-                height: 25%;  margin-bottom: 5%; width: 100%;  background: white; float: left; color: white;
+                height: 25%;
+                width: 100%;
+                background: white;
+                float: left;
+                color: white;
                 text-align: left;
                 margin-left: auto;
                 margin-right: auto;
             }
             #ico1{
                 position: absolute;
-                bottom:-40%;
-                left: 5%;
+                bottom: -50%;
+                left: 0;
                 font-size: 2em;
                 height: 5%;
                 width: 5%;
@@ -587,12 +606,13 @@ include 'web/footer.php';
                 animation-delay: 2s;
                 color: #ff6600;
                 z-index: 3;
+                float: left;
 
             }
             #ico2{
                 position: absolute;
-                bottom:-40%;
-                left: 5%;
+                bottom: -50%;
+                left: 0;
                 font-size: 4em;
                 height: 5%;
                 width: 5%;
@@ -605,12 +625,14 @@ include 'web/footer.php';
                 animation-iteration-count: infinite;
                 color: white;
                 z-index: 2;
+                float: left;
+
 
             }
             #ico3{
                 position: absolute;
-                bottom:-40%;
-                left: 5%;
+                bottom: -50%;
+                left: 0;
                 font-size: 6em;
                 height: 5%;
                 width: 5%;
@@ -623,6 +645,8 @@ include 'web/footer.php';
                 animation-iteration-count: infinite;
                 color: white;
                 z-index: 1;
+                float: left;
+
             }
 
 
@@ -630,68 +654,68 @@ include 'web/footer.php';
             /* Chrome, Safari, Opera */
             /* Chrome, Safari, Opera */
             @-webkit-keyframes mov1 {
-                0%   {color:#ff6600; left:5%; bottom:-40%;}
-                40%  {z-index: 3; color:#ff6600; font-size: 4em; left:40%; bottom:-40%;}
-                45%  {z-index: 1; color: white; font-size: 4em; left:45%; bottom:-40%}
-                90%  {z-index: 1; color: white; font-size: 4em; left:90%; bottom:-40%}
-                95%  {z-index: 1; color: white; font-size: 4em; left:90%; bottom:-40%}
-                100%  {z-index: 1; color: white; font-size: 4em; left:90%; bottom:-40%}
+                0%   {color:#ff6600; left:0; bottom:-50%;}
+                40%  {z-index: 3; color:#ff6600; font-size: 4em; left:40%; bottom:-50%;}
+                45%  {z-index: 1; color: white; font-size: 4em; left:45%; bottom:-50%}
+                90%  {z-index: 1; color: white; font-size: 4em; left:90%; bottom:-50%}
+                95%  {z-index: 1; color: white; font-size: 4em; left:90%; bottom:-50%}
+                100%  {z-index: 1; color: white; font-size: 4em; left:90%; bottom:-50%}
 
 
             }
 
             /* Standard syntax */
             @keyframes mov1 {
-                0%   {color:#ff6600; left:5%; bottom:-40%;}
-                40%  {z-index: 3; color:#ff6600; font-size: 4em; left:40%; bottom:-40%;}
-                45%  {z-index: 1; color: white; font-size: 4em; left:45%; bottom:-40%}
-                90%  {z-index: 1; color: white; font-size: 4em; left:90%; bottom:-40%}
-                95%  {z-index: 1; color: white; font-size: 4em; left:90%; bottom:-40%}
-                100%  {z-index: 1; color: white; font-size: 4em; left:90%; bottom:-40%}
+                0%   {color:#ff6600; left:0; bottom:-50%;}
+                40%  {z-index: 3; color:#ff6600; font-size: 4em; left:40%; bottom:-50%;}
+                45%  {z-index: 1; color: white; font-size: 4em; left:45%; bottom:-50%}
+                90%  {z-index: 1; color: white; font-size: 4em; left:90%; bottom:-50%}
+                95%  {z-index: 1; color: white; font-size: 4em; left:90%; bottom:-50%}
+                100%  {z-index: 1; color: white; font-size: 4em; left:90%; bottom:-50%}
             }
 
 
             /* Chrome, Safari, Opera */
             /* Chrome, Safari, Opera */
             @-webkit-keyframes mov2 {
-                0%   {color:white; left:5%; bottom:-40%;}
-                40%  {z-index: 2; color: white; font-size: 4em; left:40%; bottom:-40%;}
-                45%  {z-index: 3; color: #ff6600; font-size: 4em; left:45%; bottom:-40%}
-                90%  {z-index: 3; color: #ff6600; font-size: 6em; left:90%; bottom:-40%}
-                95%  {z-index: 2; color: white; font-size: 6em; left:90%; bottom:-40%}
-                100%  {z-index: 2; color: white; font-size: 6em; left:90%; bottom:-40%}
+                0%   {color:white; left:0%; bottom:-50%;}
+                40%  {z-index: 2; color: white; font-size: 4em; left:40%; bottom:-50%;}
+                45%  {z-index: 3; color: #ff6600; font-size: 4em; left:45%; bottom:-50%}
+                90%  {z-index: 3; color: #ff6600; font-size: 6em; left:90%; bottom:-50%}
+                95%  {z-index: 2; color: white; font-size: 6em; left:90%; bottom:-50%}
+                100%  {z-index: 2; color: white; font-size: 6em; left:90%; bottom:-50%}
             }
 
             /* Standard syntax */
             @keyframes mov2 {
-                0%   {color:white; left:5%; bottom:-40%;}
-                40%  {z-index: 2; color: white; font-size: 4em; left:40%; bottom:-40%;}
-                45%  {z-index: 3; color: #ff6600; font-size: 4em; left:45%; bottom:-40%}
-                90%  {z-index: 3; color: #ff6600; font-size:6em; left:90%; bottom:-40%}
-                95%  {z-index: 2; color: white; font-size: 6em; left:90%; bottom:-40%}
-                100%  {z-index: 2; color: white; font-size: 6em; left:90%; bottom:-40%}
+                0%   {color:white; left:0%; bottom:-50%;}
+                40%  {z-index: 2; color: white; font-size: 4em; left:40%; bottom:-50%;}
+                45%  {z-index: 3; color: #ff6600; font-size: 4em; left:45%; bottom:-50%}
+                90%  {z-index: 3; color: #ff6600; font-size:6em; left:90%; bottom:-50%}
+                95%  {z-index: 2; color: white; font-size: 6em; left:90%; bottom:-50%}
+                100%  {z-index: 2; color: white; font-size: 6em; left:90%; bottom:-50%}
             }
 
 
             /* Chrome, Safari, Opera */
             /* Chrome, Safari, Opera */
             @-webkit-keyframes mov3 {
-                0%   {color: white; left:5%; bottom:-40%;}
-                40%  {z-index: 1; color: white; font-size: 4em; left:40%; bottom:-40%;}
-                45%  {z-index: 1; color: white; font-size: 4em; left:45%; bottom:-40%}
-                90%  {z-index: 1; color: white; font-size: 6em; left:90%; bottom:-40%}
-                95%  {z-index: 3; color: #ff6600; font-size: 6em; left:90%; bottom:-40%}
-                100%  {z-index: 3; color: #ff6600; font-size: 6em; left:90%; bottom:-40%}
+                0%   {color: white; left:0%; bottom:-50%;}
+                40%  {z-index: 1; color: white; font-size: 4em; left:40%; bottom:-50%;}
+                45%  {z-index: 1; color: white; font-size: 4em; left:45%; bottom:-50%}
+                90%  {z-index: 1; color: white; font-size: 6em; left:90%; bottom:-50%}
+                95%  {z-index: 3; color: #ff6600; font-size: 6em; left:90%; bottom:-50%}
+                100%  {z-index: 3; color: #ff6600; font-size: 6em; left:90%; bottom:-50%}
             }
 
             /* Standard syntax */
             @keyframes mov3 {
-                0%   {color: white; left:5%; bottom:-40%;}
-                40%  {z-index: 1; color: white; font-size: 4em; left:40%; bottom:-40%;}
-                45%  {z-index: 1; color: white; font-size: 4em; left:45%; bottom:-40%}
-                90%  {z-index: 1; color: white; font-size: 6em; left:90%; bottom:-40%}
-                95%  {z-index: 3; color: #ff6600; font-size: 6em; left:90%; bottom:-40%}
-                100%  {z-index: 3; color: #ff6600; font-size: 6em; left:90%; bottom:-40%}
+                0%   {color: white; left:0%; bottom:-50%;}
+                40%  {z-index: 1; color: white; font-size: 4em; left:40%; bottom:-50%;}
+                45%  {z-index: 1; color: white; font-size: 4em; left:45%; bottom:-50%}
+                90%  {z-index: 1; color: white; font-size: 6em; left:90%; bottom:-50%}
+                95%  {z-index: 3; color: #ff6600; font-size: 6em; left:90%; bottom:-50%}
+                100%  {z-index: 3; color: #ff6600; font-size: 6em; left:90%; bottom:-50%}
             }
 
 
@@ -700,14 +724,10 @@ include 'web/footer.php';
         </style>
 
         <div id="animation" style="height: 23%; width: 100%; margin-left: auto; margin-right: auto;">
-            <i class="fa fa-child fa-4x" id="ico1"></i>
-            <i class="fa fa-male fa-4x" id="ico2"></i>
-            <i class="fa fa-graduation-cap fa-4x" id="ico3"></i>
 
+            <img id="acesso" src="img/landing.png" style="position: relative; top: 10%; left: 10%; width: 35%; cursor: pointer; float: left;">
 
-            <img id="acesso" src="img/landing.png" style="position: relative; top: 20%; left: 10%; width: 35%; cursor: pointer; float: left;">
-
-             <span style="font-size: 3em; color: black; position: relative; top: 40%; left: 15%; width: 50%; float: left;"> Educação e ciência transformam vidas.<br><br><br><br>  Junte-se a nós e ajude a transformar <br><br><br><br> o mundo.<br><br><br><br>
+             <span style="font-size: 3em; color: black; position: relative; top: 30%; left: 15%; width: 50%; float: left;"> Educação e ciência transformam vidas.<br><br><br><br>  Junte-se a nós e ajude a transformar <br><br><br><br> o mundo.<br><br><br><br>
                  <span style="font-size: 0.7em;">
                  <button class="sobre_inicio" style="cursor: pointer; background: #ff6600; color: white; "><i class="fa fa-file-text-o fa-1x"></i> Sobre o PFC</button> |
               <button class="parceiros_menu1" style=" cursor: pointer; "><i class="fa fa-institution fa-1x"></i> Parceiros</button> |
@@ -717,8 +737,10 @@ include 'web/footer.php';
 
         </div>
 
-        <div style="width: 70%; overflow: hidden; border-radius: 10px; background-color: transparent; border: 1px solid #ff6600; margin-left: auto; margin-right: auto; padding: 1em; position: relative;">
-            <h1 align="center" style=" font-size: 2em; color: #ff6600;">Conheça o Programa Futuro Cientista</h1>
+        <div style="width: 70%; overflow: hidden; border-radius: 10px; background-color: transparent; border: 1px solid #ff6600; margin-left: auto; margin-right: auto; padding: 1em; position: relative; top: 0;">
+
+            <h1 class="sobre_inicio2" align="center" style="background-color: white; font-size: 2em; color: #ff6600; font-weight: normal; cursor: pointer;">Conheça o Programa Futuro Cientista <i class="fa fa-angle-double-down fa-1x"></i>
+            </h1>
             <p style="font-size: 1.5em; line-height: 1em;">
                 O Programa Futuro Cientista (PFC) tem a miss&#227;o de incentivar e proporcionar condi&#231;&#245;es para o desenvolvimento cient&#237;fico desde a fase escolar, investindo na forma&#231;&#227;o b&#225;sica dos estudantes e preparando-os para encarar e superar desafios. A iniciativa nasceu em 2010 na Universidade Federal de S&#227;o Carlos (Ufscar), campus Sorocaba, e &#233; reconhecida como Tecnologia Social pela Funda&#231;&#227;o Banco do Brasil.
             </p>
@@ -727,10 +749,22 @@ include 'web/footer.php';
             </p>
         </div>
 
+        <br><br><br><br><br><br><br><br>
 
-        <br><br><br><br><br><br><br><br><br><br>
+        <div style="width: 100%; height: 1px; border-top: 1px solid rgba(0,0,255,.4);"></div>
 
-        <div style="width: 100%; height: 5%;">
+        <h1 id="plano_de_vida" align="center" style="background-color: white; font-size: 2em; color: #3b5998; font-weight: normal; cursor: pointer; border: 1px solid rgba(0,0,255,.4); padding: .5em; border-radius: 10px; width: 20%; margin-left: auto; margin-right:auto; margin-top: -2%;"> Conheça nosso Plano de Vida <i class="fa fa-angle-double-down fa-1x"></i></h1>
+        <br><br><br><br><br>
+
+
+
+        <i class="fa fa-child fa-4x" id="ico1"></i>
+        <i class="fa fa-male fa-4x" id="ico2"></i>
+        <i class="fa fa-graduation-cap fa-4x" id="ico3"></i>
+
+
+        <div id="plano_vida" style=" width: 100%; height: 5%;">
+            
             <div style="width: .25%; height: 100%; float: left;"></div>
 
 
@@ -785,13 +819,33 @@ include 'web/footer.php';
             <div style="width: 12%; overflow: hidden; background-color: #F58220; float: left;">
                 <h1 align="center" style="line-height: 1em;">Cientista <br> Senior <br>(Pesquisador)</h1>
             </div>
+
+            <div style="width: .25%; height: 100%; float: left;"></div>
+
         </div>
+
+        <style>
+            #plano_vida {
+                position: relative;
+                top: 3.5%;
+            }
+
+            @media (max-width: 2001px){
+                #plano_vida{
+                    position: relative;
+                    top: 6%;
+                }
+            }
+        </style>
 
         <div style="width: 100%; height: 3%;"></div>
 
+        <div style="margin-top: 10%;width: 100%; height: 1px; border-top: 1px solid rgba(0,255,0,.5);"></div>
 
-        <div style="width: 100%; overflow: hidden; background-color: white;">
-            <span id="parceiros_inicio" style="color: green; cursor: pointer; font-size: 2em; margin-top: 2em;">Conheça nossos Parceiros. <i class="fa fa-angle-double-down fa-1x"></i></span>
+        <h1 id="parceiros_inicio" align="center" style="background-color: white; font-size: 2em; color: green; font-weight: normal; cursor: pointer; border: 1px solid rgba(0,255,0,.5); padding: .5em; border-radius: 10px; width: 20%; overflow: hidden; margin-left: auto; margin-right:auto; margin-top: -2%;">Conheça nossos Parceiros <i class="fa fa-angle-double-down fa-1x"></i></h1>
+
+
+        <div style="margin-top: 0%;width: 100%; overflow: hidden; background-color: white;">
 
             <div id="prefeituras_inicio" style="width: 100%; overflow: hidden; padding-bottom: 3%; padding-top: 1%;  background: white;"><br><br><br>
                 <span style="font-size: 2em; color: #ff6600;"><i class="fa fa-institution fa-1x"></i> Prefeituras</span><br><br><br>
@@ -845,7 +899,7 @@ include 'web/footer.php';
             </div>
 
             <!-- EMPRESAS -->
-            <div id="empresas_inicio"  style="width: 100%; overflow: hidden; padding-bottom: 3%; padding-top: 3%; background: white;">
+            <div id="empresas_inicio"  style=" width: 100%; overflow: hidden; padding-bottom: 10%; padding-top: 3%; background: white;">
                 <span style="font-size: 2em; color: #ff6600;"><i class="fa fa-building fa-1x"></i> Empresas</span><br><br><br>
                 <div style="float: left; width: 10%; height: 10%"></div>
                 <div style="float: left; width: 20%;"> <a onclick=window.open("http://www.gerdau.com.br/") class="trs"><img  src="<?php echo $root_html ?>img/parceiros/gerdau.png" alt="" width="70%" id="parc_gerdau"/></a><br><br>Gerdau</div>
@@ -853,7 +907,8 @@ include 'web/footer.php';
                 <div style="float: left; width: 20%;"> <a onclick=window.open("http://www.objetivosorocaba.com.br/") class="trs"><img  src="<?php echo $root_html ?>img/parceiros/objetivo.png" alt="" width="70%" id="parc_objetivo_sorocaba" /></a><br><br>Col&eacute;gio Objetivo Sorocaba</div>
                 <div style="float: left; width: 20%;"> <a onclick=window.open("https://www.fbb.org.br/") class="trs"><img  src="<?php echo $root_html ?>img/parceiros/tecsocial.png" alt="" width="70%" id="parc_banco_brasil" /></a><p style="margin-top: 10px">Fundação Banco do Brasil</div>
                 <div style="float: left; width: 10%; height: 10%"></div>
-            </div>   <br><br>
+            </div>
+
             <div id="realizacao_inicio" style="width: 100%; overflow: hidden; background: black; color: #ff6600; padding-bottom: 3%; padding-top: 3%;">
                 <span style="font-size: 2em; color: #ff6600;"><i class="fa fa-plus fa-1x"></i> Realiza&ccedil;&atilde;o e Selos</span><br><br>
 
@@ -890,15 +945,11 @@ include 'web/footer.php';
              | <i class="fa fa-phone fa-1x"></i> (15)3229-8840 | <i class="fa fa-envelope fa-1x"></i> contato@futucientista.net
            </span>
              </div>
-             <div id="footer_inicio2" style="width: 100%; float: left; height: 6.5%; background: lightgray; color: #ff6600; font-size: 1.4em; padding-top: .6%;">
-        <span>
-            <i class="fa fa-code fa-1x"></i> Desenvolvedor do Projeto e Sistema:
-            Caio Perroni Gnecco | <i class="fa fa-phone fa-1x"></i> (15)98126-3628 | <i class="fa fa-envelope fa-1x"></i> caiognecco@gmail.com <br>
-            		<div style="width: 100%; padding-top: .7%; padding-bottom: .7%;">
-                        <li style="height: 1px; width: 100%; background-color: #ffffff; margin-top: 0%;"></li>
-                    </div>
-            <i class="fa fa-code fa-1x"></i> Desenvolvedor Front-End: Bernardo Pinheiro Camargo | <i class="fa fa-phone fa-1x"></i> (16)98100-4626 | <i class="fa fa-envelope fa-1x"></i> bernardopcamargo@gmail.com
-        </span>
+                 <div id="footer_inicio2" style="width: 100%; float: left; height: 4.5%; background: lightgray; color: #ff6600; font-size: 1.4em; padding-top: 1%;">
+                 <span style="display: inline-block; vertical-align: middle;">
+                    <i class="fa fa-code fa-1x"></i> Site e Sistema desenvolvidos por:
+                    <a target="_blank" href="https://br.linkedin.com/in/caio-perroni-gnecco-5908a260">Caio Perroni Gnecco</a> | <a href="mailto:bernardopcamargo@gmail.com">Bernardo Pinheiro Camargo</a>
+                </span>
              </div>
          </div>
 

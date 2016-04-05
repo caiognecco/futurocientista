@@ -17,7 +17,7 @@ include '../web/header.php';
     </div>
 
 </div>
-<div id="corpo">
+<div id="corpo" style="width: 100%; height: 50%;">
 
     <div class="hover" id="pjuridica">
         <div class="container" id="pjuridica_inicial">

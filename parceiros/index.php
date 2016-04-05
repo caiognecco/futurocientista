@@ -296,6 +296,8 @@ include '../web/header.php';
         </div>
     </div> <!-- Fundação Banco do Brasil -->
 
+    <div style="width: 100%; height: 10%; float: left;"></div>
+
     <div style="width: 100%; overflow: hidden; background-color: #000; color: #ffffff;">
         <h2 style="text-align: center; color: #ff7600; font-size: 30pt;">Realizaç&#227;o e Selos</h2>
         <li style="height: 1px; width: 100%; background-color: #ffffff;"></li>
@@ -454,12 +456,8 @@ include '../web/header.php';
 </div>
 <div id="footer_inicio2" style="width: 100%; float: left; height: 10%; background: lightgray; color: #ff6600; font-size: 1.1em; padding-top: .4%;">
         <span>
-            <i class="fa fa-code fa-1x"></i> Desenvolvedor do Projeto e Sistema:
-            Caio Perroni Gnecco | <i class="fa fa-phone fa-1x"></i> (15)98126-3628 | <i class="fa fa-envelope fa-1x"></i> caiognecco@gmail.com <br>
-            		<div style="width: 100%; padding-top: .5%; padding-bottom: .5%;">
-                        <li style="height: 1px; width: 100%; background-color: #ffffff; margin-top: 0%;"></li>
-                    </div>
-            <i class="fa fa-code fa-1x"></i> Desenvolvedor Front-End: Bernardo Pinheiro Camargo | <i class="fa fa-phone fa-1x"></i> (16)98100-4626 | <i class="fa fa-envelope fa-1x"></i> bernardopcamargo@gmail.com
+            <i class="fa fa-code fa-1x"></i> Site e Sistema desenvolvidos por:
+            <a target="_blank" href="https://br.linkedin.com/in/caio-perroni-gnecco-5908a260">Caio Perroni Gnecco</a> | <a href="mailto:bernardopcamargo@gmail.com">Bernardo Pinheiro Camargo</a>
         </span>
 </div>
 <div style="height: 6%; width: 100%;"></div>

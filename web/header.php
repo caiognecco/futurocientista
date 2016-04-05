@@ -66,7 +66,7 @@
             
             <div style="height: 25.8%; width: 100%"></div>
         <div id="menu_estatico11" >
-            <form class="formulario" style=" padding: 0; box-shadow: none; height: 50%; width: 100%; background: transparent; color: white;" id="form" action="login.php" method="post"> 
+            <form class="formulario" style=" padding: 0; box-shadow: none; height: 50%; width: 100%; background: transparent; color: white;" id="form" action="../sistema/login.php" method="post">
                 <button class="sistema" style="height: 1.5em; font-size: 1em "><i class="fa fa-gear fa-1x"></i> Entrar no Sistema EAD :</button> <input id="login_email" style="width: 25%; height: 1.5em; border-radius: 0.3em; padding-left: 0.2em; font-size: 1em;" type="text" name="email" placeholder="Email (nome@exemplo.com)" required="required"> | 
                 <input id="login_senha"  style="width: 25%; height: 1.5em; border-radius: 0.3em; padding-left: 0.2em; font-size: 1em " type="password" name="senha" maxlength=10 pattern="^.{6,10}$" placeholder="Senha" required="required">
                 <button id="login_submit" style="height: 1.5em; font-size: 1em " type="submit"><i class="fa fa-send fa-1x"></i> Entrar</button>

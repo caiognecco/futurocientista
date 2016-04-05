@@ -1,7 +1,7 @@
 <?php 
 include '../../web/seguranca.php';
 $id_usuario = $_POST['id_usuario'];
-$query = "UPDATE usuario SET nome = '".htmlentities($_POST['nome_cadastrar'])."', email = '".$_POST['email']."', tel = '".$_POST['tel']."', id_escola = '".$_POST['escola1']."', camiseta = '".$_POST['camiseta']."', serie = '".$_POST['serie']."', senha = '".$_POST['senha']."', data_nasc = '".$_POST['data']."', rg = '".$_POST['rg']."', ra = '".$_POST['ra']."', end = '".htmlentities($_POST['end'])."', cel = '".$_POST['cel']."', sexo = '".$_POST['sexo']."', etnia = '".$_POST['etnia']."', mae = '".htmlentities($_POST['mae'])."', pai = '".htmlentities($_POST['pai'])."', face = '".htmlentities($_POST['face'])."' WHERE id_usuario = '".$_POST['id_usuario']."'";
+$query = "UPDATE usuario SET nome = '".$_POST['nome_cadastrar']."', email = '".$_POST['email']."', tel = '".$_POST['tel']."', id_escola = '".$_POST['escola1']."', camiseta = '".$_POST['camiseta']."', serie = '".$_POST['serie']."', senha = '".$_POST['senha']."', data_nasc = '".$_POST['data']."', rg = '".$_POST['rg']."', ra = '".$_POST['ra']."', end = '".$_POST['end']."', cel = '".$_POST['cel']."', sexo = '".$_POST['sexo']."', etnia = '".$_POST['etnia']."', mae = '".$_POST['mae']."', pai = '".$_POST['pai']."', face = '".$_POST['face']."' WHERE id_usuario = '".$_POST['id_usuario']."'";
 
 if (mysql_query($query)){
     

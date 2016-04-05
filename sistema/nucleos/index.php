@@ -130,9 +130,6 @@ if (isset($_GET['p']) && isset($_GET['r'])):
                 });
 
                 $('#data_input').mask("99/99/9999");
-                $('.upper').keyup(function () {
-                    $(this).val(($(this).val()).toUpperCase());
-                });
             });
         </script>
 
@@ -145,14 +142,14 @@ if (isset($_GET['p']) && isset($_GET['r'])):
             <form class="formulario" id="cadastrar_form" enctype="multipart/form-data">
                 <br>
                <input style="display: none" type="text" name="id_escola" placeholder="Nome" value="<?php echo $r ?>">             
-               <label>Nome:</label><input type="text" class="upper" name="nome_cadastrar" placeholder="Nome" value="<?php echo $escola['nome_escola'] ?>"><br><br>
+                <label>Nome:</label><input type="text" name="nome_cadastrar" placeholder="Nome" value="<?php echo $escola['nome_escola'] ?>"><br><br>
                 <label>E-mail do Responsável:</label><input type="text" name="email" placeholder="E-mail do Responsável" value="<?php echo $escola['email_responsavel'] ?>"><br><br>
                 <label>Telefone Fixo:</label><input type="text" name="telefone_fixo" placeholder="Telefone Fixo"  value="<?php echo $escola['telefone_fixo'] ?>"><br><br>
-                <label>Logradouro:</label><input type="text" class="upper" name="logradouro" placeholder="Logradouro"  value="<?php echo $escola['logradouro'] ?>"><br><br>
-                <label>Bairro:</label><input type="text" class="upper" name="bairro" placeholder="Bairro"  value="<?php echo $escola['bairro'] ?>"><br><br>
+                <label>Logradouro:</label><input type="text" name="logradouro" placeholder="Logradouro"  value="<?php echo $escola['logradouro'] ?>"><br><br>
+                <label>Bairro:</label><input type="text" name="bairro" placeholder="Bairro"  value="<?php echo $escola['bairro'] ?>"><br><br>
                 <label>CEP:</label><input type="text" name="cep" placeholder="CEP"  value="<?php echo $escola['cep'] ?>"><br><br>
                 <label>Cidade::</label><input type="text" name="cidade" placeholder="Cidade"  value="<?php echo $escola['cidade'] ?>"><br><br>
-                <label>Nome do Diretor:</label><input type="text"  class="upper" name="nome_diretor" placeholder="Nome do Diretor"  value="<?php echo $escola['nome_diretor'] ?>"><br><br>
+                <label>Nome do Diretor:</label><input type="text" name="nome_diretor" placeholder="Nome do Diretor"  value="<?php echo $escola['nome_diretor'] ?>"><br><br>
                 
                 <button type="button" id="salvar_botao"><i class="fa fa-save fa-1x"></i> Salvar</button>
                 <button type="button" onclick="history.go(-1);"><i class="fa fa-arrow-circle-left fa-1x"></i> Voltar</button>
@@ -305,9 +302,6 @@ else: //NORMAL
 
 
             });
-            $('.upper').keyup(function () {
-                    $(this).val(($(this).val()).toUpperCase());
-                });
 
           
 
@@ -339,7 +333,7 @@ else: //NORMAL
                 <option selected="true" value="null">Escolha uma cidade</option>
                 <?php
                 while ($e = mysql_fetch_array($escola)) {
-                    echo '<option value="' . html_entity_decode($e['cidade']) . '">' . $e['cidade'] . '</option>';
+                    echo '<option value="' . $e['cidade'] . '">' . $e['cidade'] . '</option>';
                 }
                 ?>
             </select>
@@ -370,14 +364,14 @@ else: //NORMAL
         <div id="cadastrar" style="display: none;">
             <form class="formulario" id="cadastrar_form" enctype="multipart/form-data">
                 <br>Preencha todos os campos:<br><br>
-                <input type="text" class="upper" name="nome_cadastrar" placeholder="Nome Escola"><br><br>
+                <input type="text" name="nome_cadastrar" placeholder="Nome Escola"><br><br>
                 <input type="text" name="cidade1" placeholder="Cidade"><br><br>
                 <input type="text" name="email" placeholder="E-mail do Responsável"><br><br>
-                <input type="text" class="upper" name="logradouro" placeholder="Logradouro"><br><br>
-                <input type="text" class="upper" name="bairro" placeholder="Bairro"><br><br>
+                <input type="text" name="logradouro" placeholder="Logradouro"><br><br>
+                <input type="text" name="bairro" placeholder="Bairro"><br><br>
                 <input type="text" name="cep" placeholder="CEP"><br><br>
                 <input type="text" name="tel" placeholder="Telefone Fixo"><br><br>
-                <input type="text" class="upper" name="nome_diretor" placeholder="Nome do Diretor"><br><br>
+                 <input type="text" name="nome_diretor" placeholder="Nome do Diretor"><br><br>
                 
                 
                 <button type="button" id="cadastrar_botao"><i class="fa fa-plus fa-1x"></i> Cadastrar</button>
