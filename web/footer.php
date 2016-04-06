@@ -70,10 +70,10 @@
 
              <div style="float: left; width: 10%; height: 45%;"></div>
 
-            <div style="float: left; width: 20%;"> <a onclick=window.open("http://www.gerdau.com.br/") class="trs"><img  src="<?php echo $root_html ?>img/parceiros/gerdau.png" alt="" width="70%" class="parc_gerdau"/></a><br><br>Gerdau</div>
-            <div style="float: left; width: 20%;"> <a onclick=window.open("http://www.uniso.br/") class="trs"><img  src="<?php echo $root_html ?>img/parceiros/uniso.png" alt="" width="70%"  class="parc_uniso"/></a><br><br>UNISO - Universidade de Sorocaba</div>
-            <div style="float: left; width: 20%;"> <a onclick=window.open("http://www.objetivosorocaba.com.br/") class="trs"><img  src="<?php echo $root_html ?>img/parceiros/objetivo.png" alt="" width="70%" class="parc_objetivo_sorocaba" /></a><br><br>Col&eacute;gio Objetivo Sorocaba</div>
-            <div style="float: left; width: 20%;"> <a onclick=window.open("https://www.fbb.org.br/") class="trs"><img  src="<?php echo $root_html ?>img/parceiros/tecsocial.png" alt="" width="70%" class="parc_banco_brasil" /></a><p style="margin-top: 10px">Fundação Banco do Brasil</div>
+            <div class="parc_gerdau" style="float: left; width: 20%;"> <a onclick=window.open("http://www.gerdau.com.br/") class="trs"><img  src="<?php echo $root_html ?>img/parceiros/gerdau.png" alt="" width="70%" class="parc_gerdau"/></a><br><br>Gerdau</div>
+            <div  class="parc_uniso" style="float: left; width: 20%;"> <a onclick=window.open("http://www.uniso.br/") class="trs"><img  src="<?php echo $root_html ?>img/parceiros/uniso.png" alt="" width="70%"  class="parc_uniso"/></a><br><br>UNISO - Universidade de Sorocaba</div>
+            <div  class="parc_objetivo_sorocaba" style="float: left; width: 20%;"> <a onclick=window.open("http://www.objetivosorocaba.com.br/") class="trs"><img  src="<?php echo $root_html ?>img/parceiros/objetivo.png" alt="" width="70%" class="parc_objetivo_sorocaba" /></a><br><br>Col&eacute;gio Objetivo Sorocaba</div>
+            <div  class="parc_banco_brasil" style="float: left; width: 20%;"> <a onclick=window.open("https://www.fbb.org.br/") class="trs"><img  src="<?php echo $root_html ?>img/parceiros/tecsocial.png" alt="" width="70%" class="parc_banco_brasil" /></a><p style="margin-top: 10px">Fundação Banco do Brasil</div>
 
         </div>
         <div id="realizacao_inicio" style="padding-top:2em; padding-bottom:2em;width: 100%; overflow: hidden; background: black; color: #ff6600;">

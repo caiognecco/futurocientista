@@ -6,6 +6,9 @@ $img = 'facebook';
 include 'web/seguranca.php';
 include 'web/script.php';
 include 'web/header.php';
+
+$query_conteudo = "SELECT * FROM conteudo as c, tipo_conteudo as tipc WHERE c.id_tipo = tipc.id_tipo AND c.destaque = 1 ";
+$result_conteudo = mysql_query($query_conteudo);
 ?>
 <div id="fb-root"></div>
 <script>
@@ -210,6 +213,36 @@ include 'web/header.php';
 
 
     <div  class="conteudo_ead_corpo" style="float: left; width: 59.9%; height: 63%;  background: lightgray; color: #ff6600; border-bottom: 0.15em white solid;">
+    <div class="slider" style="height: 100%; ">
+        
+        <?php
+        while ($res = mysql_fetch_array($result_conteudo)) {
+            echo '<div>';
+            echo '<div style="cursor: pointer; position: relative; left: 10%; width: 80%; height: 70%; background: lightgray; color: black;" onclick="location.href= \''.$root_html.'/conteudo/'.$res['id_tipo'].'/'.$res['id_conteudo'].'\'"/>';
+            echo  '<div style="height: 10%; width: 100%; background: '.$res['cor'].'; color: white; border-bottom: 0.1em solid white;" class="container"><span><i class="fa '.$res['ico'].' fa-1x"></i> '.$res['nome'].'</span></div>';
+            echo  '<div style="height: 10%; width: 100%; background: white; color: '.$res['cor'].';" class="container"><span>'.$res['titulo'].'</span></div>';
+            echo  '<div style="height: 7%; width: 100%; background: '.$res['cor'].'; color: white;" class="container"><span><small>Temas <i class="fa fa-angle-double-down fa-1x"></i></small></span></div>';
+            echo  '<div style="height: 23%; width: 100%; background: white ">';
+            $query_tag = 'SELECT t.nome from temas as t inner join tema_conteudo as t_c on t.tema = t_c.tema where t_c.id_conteudo = "' . $res['id_conteudo'] . '"';
+            $result_tag = mysql_query($query_tag);
+            while ($res_tags = mysql_fetch_assoc($result_tag)) {
+                echo '<div class="resultado_tag"><small><i class="fa fa-caret-right fa-1x" style="color: #ff6600;"></i> ';
+                echo $res_tags['nome'];
+                echo '</small></div>';
+            }
+            echo  '</div>';
+            echo  '<div style="height: 7%; width: 100%; background: '.$res['cor'].'; color: white ;" class="container"><span><small>Descrição <i class="fa fa-angle-double-down fa-1x"></i></small></span></div>';
+            echo  '<div style="height: 43%; width: 98%; padding-left: 1%; padding-right: 1%; background: white;" ><small><br>'.$res['descricao'].'</small></div>';
+            echo'</div>';
+            echo '</div>';
+        }
+        
+        ?>
+            
+            
+
+
+        </div>  
     </div>
 
     <div id="ajude_corpo" style="float: right; width: 39.9%; height: 63%;  color: #ff6600; border-bottom: 0.15em white solid; overflow: hidden;">
@@ -484,7 +517,7 @@ include 'web/header.php';
         </div>
     </div>
 
-    <div  class="projetos_corpo" style="overflow: hidden; float: left; width: 59.9%; height: 63%;  background: lightgray;  color: #ff6600; border-bottom: 0.15em white solid; padding-bottom: 2%;">
+    <div  class="projetos_corpo" style="overflow: hidden; float: left; width: 59.9%; height: 64.1%;  background: lightgray;  color: #ff6600; border-bottom: 0.15em white solid; padding-bottom: 2%;">
         <div class="slider" style="width: 100%; height: 100%;">
             <div>
                 <h1 align="center">Ação social nas Casas Lares Bethel</h1>
@@ -530,7 +563,7 @@ include 'web/header.php';
     </div>
 
     <div  class="contato_corpo" style="float: right; width: 39.9%; height: 63%;  color: #ff6600; border-bottom: 0.15em white solid; margin-left: auto; margin-right: auto; padding-top: 2em; background-color: lightgray;">
-        <form style="float: left; width: 93%; height: 100%;" class="formulario"  action="contato/mail.php" method="post">
+        <form style="float: left; width: 93%; height: 100%; " class="formulario"   action="contato/mail.php" method="post">
 
             <select name="tipo"  required>
                 <option disabled selected value="OUTROS">Tipo de contato</option>
@@ -655,11 +688,11 @@ include 'web/footer.php';
             /* Chrome, Safari, Opera */
             @-webkit-keyframes mov1 {
                 0%   {color:#ff6600; left:0; bottom:-50%;}
-                40%  {z-index: 3; color:#ff6600; font-size: 4em; left:40%; bottom:-50%;}
-                45%  {z-index: 1; color: white; font-size: 4em; left:45%; bottom:-50%}
-                90%  {z-index: 1; color: white; font-size: 4em; left:90%; bottom:-50%}
-                95%  {z-index: 1; color: white; font-size: 4em; left:90%; bottom:-50%}
-                100%  {z-index: 1; color: white; font-size: 4em; left:90%; bottom:-50%}
+                33%  {z-index: 3; color:#ff6600; font-size: 4em; left:40%; bottom:-50%;}
+                38%  {z-index: 1; color: white; font-size: 4em; left:45%; bottom:-50%}
+                66%  {z-index: 1; color: white; font-size: 4em; left:90%; bottom:-50%}
+                71%  {z-index: 1; color: white; font-size: 4em; left:90%; bottom:-50%}
+                100%  {z-index: 1; color: white; font-size: 4em; left:100%; bottom:-50%}
 
 
             }
@@ -667,11 +700,11 @@ include 'web/footer.php';
             /* Standard syntax */
             @keyframes mov1 {
                 0%   {color:#ff6600; left:0; bottom:-50%;}
-                40%  {z-index: 3; color:#ff6600; font-size: 4em; left:40%; bottom:-50%;}
-                45%  {z-index: 1; color: white; font-size: 4em; left:45%; bottom:-50%}
-                90%  {z-index: 1; color: white; font-size: 4em; left:90%; bottom:-50%}
-                95%  {z-index: 1; color: white; font-size: 4em; left:90%; bottom:-50%}
-                100%  {z-index: 1; color: white; font-size: 4em; left:90%; bottom:-50%}
+                33%  {z-index: 3; color:#ff6600; font-size: 4em; left:33%; bottom:-50%;}
+                38%  {z-index: 1; color: white; font-size: 4em; left:38%; bottom:-50%}
+                66%  {z-index: 1; color: white; font-size: 4em; left:66%; bottom:-50%}
+                71%  {z-index: 1; color: white; font-size: 4em; left:71%; bottom:-50%}
+                100%  {z-index: 1; color: white; font-size: 4em; left:100%; bottom:-50%}
             }
 
 
@@ -679,21 +712,21 @@ include 'web/footer.php';
             /* Chrome, Safari, Opera */
             @-webkit-keyframes mov2 {
                 0%   {color:white; left:0%; bottom:-50%;}
-                40%  {z-index: 2; color: white; font-size: 4em; left:40%; bottom:-50%;}
-                45%  {z-index: 3; color: #ff6600; font-size: 4em; left:45%; bottom:-50%}
-                90%  {z-index: 3; color: #ff6600; font-size: 6em; left:90%; bottom:-50%}
-                95%  {z-index: 2; color: white; font-size: 6em; left:90%; bottom:-50%}
-                100%  {z-index: 2; color: white; font-size: 6em; left:90%; bottom:-50%}
+                33%  {z-index: 2; color: white; font-size: 4em; left:40%; bottom:-50%;}
+                38%  {z-index: 3; color: #ff6600; font-size: 4em; left:45%; bottom:-50%}
+                66%  {z-index: 3; color: #ff6600; font-size: 6em; left:90%; bottom:-50%}
+                71%  {z-index: 2; color: white; font-size: 6em; left:90%; bottom:-50%}
+                100%  {z-index: 2; color: white; font-size: 6em; left:100%; bottom:-50%}
             }
 
             /* Standard syntax */
             @keyframes mov2 {
                 0%   {color:white; left:0%; bottom:-50%;}
-                40%  {z-index: 2; color: white; font-size: 4em; left:40%; bottom:-50%;}
-                45%  {z-index: 3; color: #ff6600; font-size: 4em; left:45%; bottom:-50%}
-                90%  {z-index: 3; color: #ff6600; font-size:6em; left:90%; bottom:-50%}
-                95%  {z-index: 2; color: white; font-size: 6em; left:90%; bottom:-50%}
-                100%  {z-index: 2; color: white; font-size: 6em; left:90%; bottom:-50%}
+                33%  {z-index: 2; color: white; font-size: 4em; left:33%; bottom:-50%;}
+                38%  {z-index: 3; color: #ff6600; font-size: 4em; left:38%; bottom:-50%}
+                66%  {z-index: 3; color: #ff6600; font-size:6em; left:66%; bottom:-50%}
+                71%  {z-index: 2; color: white; font-size: 6em; left:71%; bottom:-50%}
+                100%  {z-index: 2; color: white; font-size: 6em; left:100%; bottom:-50%}
             }
 
 
@@ -701,21 +734,21 @@ include 'web/footer.php';
             /* Chrome, Safari, Opera */
             @-webkit-keyframes mov3 {
                 0%   {color: white; left:0%; bottom:-50%;}
-                40%  {z-index: 1; color: white; font-size: 4em; left:40%; bottom:-50%;}
-                45%  {z-index: 1; color: white; font-size: 4em; left:45%; bottom:-50%}
-                90%  {z-index: 1; color: white; font-size: 6em; left:90%; bottom:-50%}
-                95%  {z-index: 3; color: #ff6600; font-size: 6em; left:90%; bottom:-50%}
-                100%  {z-index: 3; color: #ff6600; font-size: 6em; left:90%; bottom:-50%}
+                33%  {z-index: 1; color: white; font-size: 4em; left:33%; bottom:-50%;}
+                38%  {z-index: 1; color: white; font-size: 4em; left:38%; bottom:-50%}
+                66%  {z-index: 1; color: white; font-size: 6em; left:90%; bottom:-50%}
+                71%  {z-index: 3; color: #ff6600; font-size: 6em; left:90%; bottom:-50%}
+                100%  {z-index: 3; color: #ff6600; font-size: 6em; left:100%; bottom:-50%}
             }
 
             /* Standard syntax */
             @keyframes mov3 {
                 0%   {color: white; left:0%; bottom:-50%;}
-                40%  {z-index: 1; color: white; font-size: 4em; left:40%; bottom:-50%;}
-                45%  {z-index: 1; color: white; font-size: 4em; left:45%; bottom:-50%}
-                90%  {z-index: 1; color: white; font-size: 6em; left:90%; bottom:-50%}
-                95%  {z-index: 3; color: #ff6600; font-size: 6em; left:90%; bottom:-50%}
-                100%  {z-index: 3; color: #ff6600; font-size: 6em; left:90%; bottom:-50%}
+                33%  {z-index: 1; color: white; font-size: 4em; left:33%; bottom:-50%;}
+                38%  {z-index: 1; color: white; font-size: 4em; left:38%; bottom:-50%}
+                66%  {z-index: 1; color: white; font-size: 6em; left:66%; bottom:-50%}
+                71%  {z-index: 3; color: #ff6600; font-size: 6em; left:71%; bottom:-50%}
+                100%  {z-index: 3; color: #ff6600; font-size: 6em; left:100%; bottom:-50%}
             }
 
 
@@ -754,7 +787,7 @@ include 'web/footer.php';
         <div style="width: 100%; height: 1px; border-top: 1px solid rgba(0,0,255,.4);"></div>
 
         <h1 id="plano_de_vida" align="center" style="background-color: white; font-size: 2em; color: #3b5998; font-weight: normal; cursor: pointer; border: 1px solid rgba(0,0,255,.4); padding: .5em; border-radius: 10px; width: 20%; margin-left: auto; margin-right:auto; margin-top: -2%;"> Conheça nosso Plano de Vida <i class="fa fa-angle-double-down fa-1x"></i></h1>
-        <br><br><br><br><br>
+        <br><br><br><br>
 
 
 
@@ -902,10 +935,10 @@ include 'web/footer.php';
             <div id="empresas_inicio"  style=" width: 100%; overflow: hidden; padding-bottom: 10%; padding-top: 3%; background: white;">
                 <span style="font-size: 2em; color: #ff6600;"><i class="fa fa-building fa-1x"></i> Empresas</span><br><br><br>
                 <div style="float: left; width: 10%; height: 10%"></div>
-                <div style="float: left; width: 20%;"> <a onclick=window.open("http://www.gerdau.com.br/") class="trs"><img  src="<?php echo $root_html ?>img/parceiros/gerdau.png" alt="" width="70%" id="parc_gerdau"/></a><br><br>Gerdau</div>
-                <div style="float: left; width: 20%;"> <a onclick=window.open("http://www.uniso.br/") class="trs"><img  src="<?php echo $root_html ?>img/parceiros/uniso.png" alt="" width="70%"  id="parc_uniso"/></a><br><br>UNISO - Universidade de Sorocaba</div>
-                <div style="float: left; width: 20%;"> <a onclick=window.open("http://www.objetivosorocaba.com.br/") class="trs"><img  src="<?php echo $root_html ?>img/parceiros/objetivo.png" alt="" width="70%" id="parc_objetivo_sorocaba" /></a><br><br>Col&eacute;gio Objetivo Sorocaba</div>
-                <div style="float: left; width: 20%;"> <a onclick=window.open("https://www.fbb.org.br/") class="trs"><img  src="<?php echo $root_html ?>img/parceiros/tecsocial.png" alt="" width="70%" id="parc_banco_brasil" /></a><p style="margin-top: 10px">Fundação Banco do Brasil</div>
+                <div class="parc_gerdau" style="float: left; width: 20%;"> <a onclick=window.open("http://www.gerdau.com.br/") class="trs"><img  src="<?php echo $root_html ?>img/parceiros/gerdau.png" alt="" width="70%" id="parc_gerdau"/></a><br><br>Gerdau</div>
+                <div class="parc_uniso" style="float: left; width: 20%;"> <a onclick=window.open("http://www.uniso.br/") class="trs"><img  src="<?php echo $root_html ?>img/parceiros/uniso.png" alt="" width="70%"  id="parc_uniso"/></a><br><br>UNISO - Universidade de Sorocaba</div>
+                <div class="parc_objetivo_sorocaba" style="float: left; width: 20%;"> <a onclick=window.open("http://www.objetivosorocaba.com.br/") class="trs"><img  src="<?php echo $root_html ?>img/parceiros/objetivo.png" alt="" width="70%" id="parc_objetivo_sorocaba" /></a><br><br>Col&eacute;gio Objetivo Sorocaba</div>
+                <div class="parc_banco_brasil" style="float: left; width: 20%;"> <a onclick=window.open("https://www.fbb.org.br/") class="trs"><img  src="<?php echo $root_html ?>img/parceiros/tecsocial.png" alt="" width="70%" id="parc_banco_brasil" /></a><p style="margin-top: 10px">Fundação Banco do Brasil</div>
                 <div style="float: left; width: 10%; height: 10%"></div>
             </div>
 

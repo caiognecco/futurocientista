@@ -1108,7 +1108,7 @@ h1{
 }
 
 .resultado_tag{
-    height: 60%;
+    overflow: hidden;
     float: left;
     background: lightgray;
     position: relative;

@@ -298,7 +298,8 @@
                             //showControls: false,
                             showBullets: false,
                             interval: 4000,
-                            startSlide: start_slide
+                            startSlide: start_slide,
+                            pauseOnHover: true
                         });
 
 
