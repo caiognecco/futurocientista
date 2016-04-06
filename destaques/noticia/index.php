@@ -8,7 +8,7 @@ $query = "SELECT * FROM noticia WHERE link='$p'";
 $result = mysql_query($query);
 $row = mysql_fetch_assoc ($result);
 $descricao = $row["noticia"];
-$img = "destaques/noticia/".$p;
+$img = "destaques/noticias/".$p;
 $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 if($p=='' || mysql_num_rows($result)==0) {
@@ -16,6 +16,10 @@ if($p=='' || mysql_num_rows($result)==0) {
 } elseif($p !='' || mysql_num_rows($result) != 0)  {
     $titulo = $row['titulo'];
 }
+
+$query_noticia = "SELECT * FROM noticia ORDER BY data DESC ";
+$result_noticia = mysql_query($query_noticia);
+
 
 include '../../web/script.php';
 include '../../web/header.php';
@@ -82,44 +86,59 @@ include '../../web/header.php';
                 </div>
             </div>
 
-            <div style="height: 100%; width: 10%; float: left;">
-                <div class="destaque1" onclick="location.href='Aprovados2016/'" style="width: 49.66666666666667%; background: url('../../img/destaques/noticias/Aprovados2016-destaque.png'); background-size: cover; background-repeat: no-repeat;  background-position: center center; height: 105%; margin-right: 0.6%; float:left; cursor: pointer; overflow: hidden; box-shadow: inset 0 0 70px .5em #000;">
-                    <h1 class="hover-text-1" style="position: relative; margin-top: 50%; color: #ffffff; margin-left: 7.5%; margin-right: 7.5%; text-shadow: #000 2px 1px; font-family: 'Open Sans'; font-size: 140%;" align="left">Alunos do PFC realizam sonho de ingressar na universidade
+            <!-- <div style="height: 100%; width: 10%; float: left;">
+                <div class="destaque1" onclick="location.href='EPFC2015/'" style="width: 49.66666666666667%; background: url('../../img/destaques/noticias/EPFC2015.png'); background-size: cover; background-repeat: no-repeat;  background-position: center center; height: 105%; margin-right: 0.6%; float:left; cursor: pointer; overflow: hidden; box-shadow: inset 0 0 70px .5em #000;">
+                    <h1 class="hover-text-1" style="position: relative; margin-top: 50%; color: #ffffff; margin-left: 7.5%; margin-right: 7.5%; text-shadow: #000 2px 1px; font-family: 'Open Sans'; font-size: 140%;" align="left">Cerca de 250 Alunos participam da II EPFC
                     </h1>
                 </div>
 
 
-                <div class="destaque-2" onclick="location.href='CesarioLange2016/'" style="width: 49.66666666666667%; height: 51.66666666666667%; margin-bottom: 0.6%; background: url('../../img/destaques/noticias/CesarioLange2016-destaque.png'); background-repeat: no-repeat; background-size: cover; background-position: center center; cursor: pointer; float:left; box-shadow: inset 0 0 70px .5em #000;">
-                    <h1 class="hover-text-2" style="margin-top: 19%; margin-left: 7%; margin-right: 7%; color: #ffffff; text-shadow: #000 2px 1px; font-family: 'Open Sans'" align="left">Cesário Lange recebe primeiras atividades do PFC</h1>
+                <div class="destaque-2" onclick="location.href='EducareCruzeiroDoSul2016/'" style="width: 49.66666666666667%; height: 51.66666666666667%; margin-bottom: 0.6%; background: url('../../img/destaques/noticias/clube_de_ciencia.png'); background-repeat: no-repeat; background-size: cover; background-position: top center; cursor: pointer; float:left; box-shadow: inset 0 0 70px .5em #000;">
+                    <h1 class="hover-text-2" style="margin-top: 16%; margin-left: 7%; margin-right: 7%; color: #ffffff; text-shadow: #000 2px 1px; font-family: 'Open Sans';" align="left">Programa estimula criação de clubes de ciências nas escolas - Jornal Cruzeiro do Sul</h1>
                 </div>
 
-                <div class="destaque-3" onclick="location.href='HomenagemCMS2015/'" style="width: 49.66666666666667%; height: 51.66666666666667%; background: url('../../img/destaques/noticias/HomenagemCMS2015-destaque.png'); background-repeat: no-repeat; background-size: cover; background-position: center center; cursor: pointer; float:left; box-shadow: inset 0 0 70px .5em #000;">
-                    <h1 class="hover-text-3" style="margin-top: 18%; margin-left: 7%; margin-right: 7%; color: #ffffff; text-shadow: #000 2px 1px; font-family: 'Open Sans'" align="left">PFC recebe homenagem na Câmara Municipal de Sorocaba</h1>
+                <div class="destaque-3" onclick="location.href='../publicacao/ERFC2015'" style="width: 49.66666666666667%; height: 51.66666666666667%; background: url('../../img/destaques/publicacoes/ERFC2015.png'); background-repeat: no-repeat; background-size: cover; background-position: center center; cursor: pointer; float:left; box-shadow: inset 0 0 70px .5em #000;">
+                    <h1 class="hover-text-3" style="margin-top: 18%; margin-left: 7%; margin-right: 7%; color: #ffffff; text-shadow: #000 2px 1px; font-family: 'Open Sans'" align="left">PFC lança mais um livro!</h1>
                 </div>
-            </div>
+            </div> -->
 
         </div>
 
 
-        <div style="position:relative; overflow: hidden; width: 70%; margin-left: 3%; margin-top: 1%; padding: 2%;">
-            <div style="border-radius: 5px; height: 30%; width: 35%; background-color: #333; float: left;">
-                <p style="font-size: 1.2em; font-weight: bolder;">NOTÍCIA</p>
-            </div>
+        <?php
+        while($res = mysql_fetch_array($result_noticia)) {
+            echo '<div style="position:relative; overflow: hidden; width: 90%; margin-left: 5%; margin-top: 1%; padding-top: 1%; padding-bottom: 1%;">';
 
-            <p style="position: absolute; right: 5%; top: 0;"><i class="fa fa-clock-o fa-1x"></i> tempo</p>
+            echo '<div style="border-radius: 5px; overflow: hidden; width: 40%;float: left;">
+                <img src="../../img/destaques/noticias/'.$res['link'].'.png'.'" width="100%" style="position: relative; float: left;"/>
+            </div>';
 
-            <p style="margin-left: 5%; float: left; color: #333; font-size: 1.5em; font-weight: bolder;">Título(link noticia)</p>
+            echo '<p style="position: absolute; right: 0; top: 0;"><i class="fa fa-clock-o fa-1x"></i> \''.implode('/', array_reverse(explode('-', $res['data'])));
 
-            <br>
+            echo '<a style="text-align: left; width: 60%; margin-left: 5%; float: left; color: #ff6600; font-size: 1.5em; font-weight: bold;" href="'.$res['link'].'">'.$res['titulo'].'</a>';
 
-            <div style="width: 60%; float: left;">
-                <li style="height: 1px; width: 100%; background-color: #333; margin-top: -2%; margin-left: 5%;"></li>
-            </div>
+            echo '<br>';
 
-            <div align="left" style=" float: left; width: 60%; margin-left: 5%;color: #000;;">
-                <p>No entanto, não podemos esquecer que o comprometimento entre as equipes assume importantes posições no estabelecimento dos procedimentos normalmente adotados. Percebemos, cada vez mais.</p>
-            </div>
-        </div>
+            echo '<div style="position: relative; margin-top: 5%; margin-left: 5%; width: 50%; float: left; height: 1px; border-top: 1px solid #333;" ></div >';
+
+            echo '<div style="position: relative; margin-left: 5%; float: left; width: 50%; color: #000; text-align: left;">
+                <p>'.substr($res['noticia'], 0, 230).'...'.'<br> Leia a reportagem completa <a href="'.$res['link'].'">clicando aqui</a>'.'</p >
+            </div >
+        </div >';
+
+            echo '        <div style="width: 90%;">
+            <li style="height: 1px; width: 100%; background-color: rgba(0,0,0,.3); margin-top: 0%; margin-left: 5%;"></li>
+        </div>';
+
+        }
+        ?>
+
+
+
+
+
+
+
 
         <div style="height: 5%; width: 23%; float: left;"></div>
 
@@ -195,7 +214,7 @@ include '../../web/header.php';
         <img src="<?php echo $root_html ?>img/<?php echo $img ?>.png" class="sombra" style="margin-left: 25%; width: 50%;"><br><br><div style="width: 100%; text-align: center;"><small><?php echo $row["legenda"]; ?></small></div><br><br>
                     <?php 
                  
-                        echo html_entity_decode($row["noticia"]);
+                        echo html_entity_decode($row["noticias"]);
                     
                     ?>
         

@@ -8,7 +8,7 @@ $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 include '../web/seguranca.php';
 include '../web/script.php';
 include '../web/header.php';
-$query = "SELECT link, titulo, data FROM noticia ORDER BY data DESC";
+$query = "SELECT link, titulo, data FROM noticias ORDER BY data DESC";
 $result = mysql_query($query);
 $query1 = "SELECT link, titulo, ano FROM publicacao ORDER BY ano DESC";
 $result1 = mysql_query($query1);
@@ -71,18 +71,18 @@ $result3 = mysql_query($query3);
 		</div>
 
 		<div style="height: 100%; width: 10%; float: left;">
-			<div class="destaque1" onclick="location.href='noticia/Aprovados2016/'" style="width: 49.66666666666667%; background: url('../img/destaques/noticias/Aprovados2016-destaque.png'); background-size: cover; background-repeat: no-repeat;  background-position: center center; height: 105%; margin-right: 0.6%; float:left; cursor: pointer; overflow: hidden; box-shadow: inset 0 0 70px .5em #000;">
-				<h1 class="hover-text-1" style="position: relative; margin-top: 50%; color: #ffffff; margin-left: 7.5%; margin-right: 7.5%; text-shadow: #000 2px 1px; font-family: 'Open Sans'; font-size: 140%;" align="left">Alunos do PFC realizam sonho de ingressar na universidade
+			<div class="destaque1" onclick="location.href='EPFC2015/'" style="width: 49.66666666666667%; background: url('../img/destaques/noticias/EPFC2015.png'); background-size: cover; background-repeat: no-repeat;  background-position: center center; height: 105%; margin-right: 0.6%; float:left; cursor: pointer; overflow: hidden; box-shadow: inset 0 0 70px .5em #000;">
+				<h1 class="hover-text-1" style="position: relative; margin-top: 50%; color: #ffffff; margin-left: 7.5%; margin-right: 7.5%; text-shadow: #000 2px 1px; font-family: 'Open Sans'; font-size: 140%;" align="left">Cerca de 250 Alunos participam da II EPFC
 				</h1>
 			</div>
 
 
-			<div class="destaque-2" onclick="location.href='noticia/CesarioLange2016/'" style="width: 49.66666666666667%; height: 51.66666666666667%; margin-bottom: 0.6%; background: url('../img/destaques/noticias/CesarioLange2016-destaque.png'); background-repeat: no-repeat; background-size: cover; background-position: center center; cursor: pointer; float:left; box-shadow: inset 0 0 70px .5em #000;">
-				<h1 class="hover-text-2" style="margin-top: 19%; margin-left: 7%; margin-right: 7%; color: #ffffff; text-shadow: #000 2px 1px; font-family: 'Open Sans'" align="left">Cesário Lange recebe primeiras atividades do PFC</h1>
+			<div class="destaque-2" onclick="location.href='EducareCruzeiroDoSul2016/'" style="width: 49.66666666666667%; height: 51.66666666666667%; margin-bottom: 0.6%; background: url('../img/destaques/noticias/clube_de_ciencia.png'); background-repeat: no-repeat; background-size: cover; background-position: top center; cursor: pointer; float:left; box-shadow: inset 0 0 70px .5em #000;">
+				<h1 class="hover-text-2" style="margin-top: 16%; margin-left: 7%; margin-right: 7%; color: #ffffff; text-shadow: #000 2px 1px; font-family: 'Open Sans';" align="left">Programa estimula criação de clubes de ciências nas escolas - Jornal Cruzeiro do Sul</h1>
 			</div>
 
-			<div class="destaque-3" onclick="location.href='noticia/HomenagemCMS2015/'" style="width: 49.66666666666667%; height: 51.66666666666667%; background: url('../img/destaques/noticias/HomenagemCMS2015-destaque.png'); background-repeat: no-repeat; background-size: cover; background-position: center center; cursor: pointer; float:left; box-shadow: inset 0 0 70px .5em #000;">
-				<h1 class="hover-text-3" style="margin-top: 18%; margin-left: 7%; margin-right: 7%; color: #ffffff; text-shadow: #000 2px 1px; font-family: 'Open Sans'" align="left">PFC recebe homenagem na Câmara Municipal de Sorocaba</h1>
+			<div class="destaque-3" onclick="location.href='../publicacao/ERFC2015'" style="width: 49.66666666666667%; height: 51.66666666666667%; background: url('../img/destaques/publicacoes/ERFC2015.png'); background-repeat: no-repeat; background-size: cover; background-position: center center; cursor: pointer; float:left; box-shadow: inset 0 0 70px .5em #000;">
+				<h1 class="hover-text-3" style="margin-top: 18%; margin-left: 7%; margin-right: 7%; color: #ffffff; text-shadow: #000 2px 1px; font-family: 'Open Sans'" align="left">PFC lança mais um livro!</h1>
 			</div>
 		</div>
 
@@ -190,7 +190,7 @@ $result3 = mysql_query($query3);
 						  </th>
 						  <?php
 						  while ($row = mysql_fetch_array($result)) {
-							  echo '<tr><td>' . implode("/", array_reverse(explode("-", $row["data"]))) . '</td><td><a class="br" href="noticia/' . $row["link"] . '">' . $row["titulo"] . '</a>';
+							  echo '<tr><td>' . implode("/", array_reverse(explode("-", $row["data"]))) . '</td><td><a class="br" href="noticias/' . $row["link"] . '">' . $row["titulo"] . '</a>';
 						  }
 						  ?>
 					  </table><br>

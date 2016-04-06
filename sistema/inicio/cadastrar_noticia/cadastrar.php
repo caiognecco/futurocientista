@@ -33,7 +33,7 @@ $consulta = mysql_query($query1);
 
 
 if (!mysql_fetch_array($consulta)) {
-    $query = "INSERT INTO futurocientista.noticia (link, titulo, noticia, arquivo, data, autor) VALUES ('$link', '$titulo', '$noticia', '$arquivo', '$data', '$autor')";
+    $query = "INSERT INTO futurocientista.noticias (link, titulo, noticias, arquivo, data, autor) VALUES ('$link', '$titulo', '$noticia', '$arquivo', '$data', '$autor')";
     $inserir = mysql_query($query);
     
     if ($inserir) {

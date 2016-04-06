@@ -160,7 +160,7 @@ while ($row2 = mysql_fetch_array($result2)) {
 </script>
 
 
-<div id="menu1"class="conteudo_ead" <?php if(isset($p)) echo 'style="background: ' . $nome1["cor"] . '; color: white;"'; else echo 'style="background: #3b5998; color: white;"'; ?>>
+<div id="menu1" class="conteudo_ead" <?php if(isset($p)) echo 'style="background: ' . $nome1["cor"] . '; color: white;"'; else echo 'style="background: #3b5998; color: white;"';?>>
 
     <div class="container" ><span style="display:inline-block; vertical-align:middle"> 
 <?php if (isset($r)): ?>
@@ -244,7 +244,7 @@ if (isset($p) && isset($r)) {
             <br><br><br>
             <div style="width: 100%; height: 1px; border-top: 1px solid rgba(0,0,255,.4);"></div>
 
-        <h1 id="plano_de_vida" align="center" style="background-color: white; font-size: 2em; color: #3b5998; font-weight: normal; cursor: pointer; border: 1px solid rgba(0,0,255,.4); padding: .5em; border-radius: 10px; width: 40%; margin-left: auto; margin-right:auto; margin-top: -2%;"> Busque pelo tipo de conteúdo <i class="fa fa-angle-double-down fa-1x"></i></h1>
+        <h1 id="" align="center" style="background-color: white; font-size: 2em; color: #3b5998; font-weight: normal; cursor: pointer; border: 1px solid rgba(0,0,255,.4); padding: .5em; border-radius: 10px; width: 40%; margin-left: auto; margin-right:auto; margin-top: -2%;"> Busque pelo tipo de conteúdo <i class="fa fa-angle-double-down fa-1x"></i></h1>
             <div style="width: 80%; overflow: hidden; position: relative; left: 10%; padding-top: 5%">
                 
           
@@ -255,14 +255,14 @@ if (isset($p) && isset($r)) {
         <br><br><br>
         <div style="width: 100%; height: 1px; border-top: 1px solid rgba(0,0,255,.4);"></div>
 
-        <h1 id="plano_de_vida" align="center" style="background-color: white; font-size: 2em; color: #3b5998; font-weight: normal; cursor: pointer; border: 1px solid rgba(0,0,255,.4); padding: .5em; border-radius: 10px; width: 40%; margin-left: auto; margin-right:auto; margin-top: -2%;"> Ou pelo título e tema <i class="fa fa-angle-double-down fa-1x"></i></h1>
+        <h1 id="" align="center" style="background-color: white; font-size: 2em; color: #3b5998; font-weight: normal; cursor: pointer; border: 1px solid rgba(0,0,255,.4); padding: .5em; border-radius: 10px; width: 40%; margin-left: auto; margin-right:auto; margin-top: -2%;"> Busque pelo título <i class="fa fa-angle-double-down fa-1x"></i></h1>
           <form class="formulario" style="height: auto" enctype="multipart/form-data" action="busca.php" method="POST"><br>
 
                 <label for="titulo_input">Título:</label>  <input style="background: white; border-color: #9daccc; " id="titulo_input" name="titulo_input" type="text" autocomplete="off" />
                 <br><br>
-                <label for="titulo_input">Temas:</label>   <br>
+               <!-- <label for="titulo_input">Temas:</label>   <br>
                 <input type="text" value="<?php if(isset($p)) echo $p; else echo''; ?>" style="display: none;" name="tipo">
-                <input type="text" data-role="tagsinput" data-provide="typeahead" name="tags" id="tags" autocomplete="off"><br><br>
+                <input type="text" data-role="tagsinput" data-provide="typeahead" name="tags" id="tags" autocomplete="off"><br><br>-->
                 <div id="resultado"> Sugestões de temas: </div><br><br>
                 <button type="button" onclick="window.location.href = '<?php echo $root_html;  ?>sistema'"><i class="fa fa-arrow-circle-left fa-1x"></i> Voltar</button>
             </form><br><br>
@@ -283,11 +283,11 @@ if (isset($p) && isset($r)) {
 
             <br>
             <form class="formulario" style="height: auto" enctype="multipart/form-data" action="busca.php" method="POST"><br>
-                <small class="ajuda_user"><i class="fa fa-1x fa-check-square"></i> Faça sua busca por título ou tema. Os resultados apareçem logo abaixo<br></small><br>
+                <small class="ajuda_user"><i class="fa fa-1x fa-check-square"></i> Faça sua busca por título. Os resultados apareçem logo abaixo<br></small><br>
 
                 <label for="titulo_input">Título:</label>  <input style="background: white; border-color: #9daccc; " id="titulo_input" name="titulo_input" type="text" autocomplete="off" />
                 <br><br>
-                <label for="titulo_input">Temas:</label>   <br>
+               <!-- <label for="titulo_input">Temas:</label>   <br>
                 <small class="ajuda_user">
                     <i class="fa fa-1x fa-check-square"></i> Use as teclas <i class="fa fa-arrow-circle-up fa-1x"></i> e <i class="fa fa-arrow-circle-down fa-1x"></i> para navegar entre as sugestões.<br>
                     <i class="fa fa-1x fa-check-square"></i> Pressione "enter" para inserir o tema. <br>
@@ -295,7 +295,7 @@ if (isset($p) && isset($r)) {
 
                 </small><br>
                 <input type="text" value="<?php if(isset($p)) echo $p; else echo''; ?>" style="display: none;" name="tipo">
-                <input type="text" data-role="tagsinput" data-provide="typeahead" name="tags" id="tags" autocomplete="off"><br><br>
+                <input type="text" data-role="tagsinput" data-provide="typeahead" name="tags" id="tags" autocomplete="off"><br><br> -->
                 <div id="resultado"> Sugestões de temas: </div><br><br>
                 <button type="button" onclick="window.location.href = '<?php echo $root_html;  ?>sistema'"><i class="fa fa-arrow-circle-left fa-1x"></i> Voltar</button>
             </form><br><br>

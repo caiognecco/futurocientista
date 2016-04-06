@@ -4,11 +4,11 @@ $p = @$_GET['p'];
 //NOTICIA
 
 include '../../web/seguranca.php';
-$query = "SELECT * FROM noticia WHERE link='$p'";
+$query = "SELECT * FROM noticias WHERE link='$p'";
 $result = mysql_query($query);
 $row = mysql_fetch_assoc ($result);
-$descricao = $row["noticia"];
-$img = "destaques/noticia/".$p;
+$descricao = $row["noticias"];
+$img = "destaques/noticias/".$p;
 $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 if($p=='' || mysql_num_rows($result)==0) {
@@ -30,7 +30,7 @@ include '../../web/header.php';
 	<div id="destaques_sobre" style="position:relative; height:13%; width: 100%; border-bottom: 0.15em white solid; margin-top: 0%;">
 		<div style="width: 100%; height: 10%; padding-top: 1%; font-size: 1.7em; margin-left: 0;">
 			<button onclick=location.href="<?php echo $root_html ?>destaques/blog/" style="background: white; color: #ff6600;" class=""> <i class='fa fa-rss fa-1x'></i> Blog</button> |
-			<button onclick=location.href="<?php echo $root_html ?>destaques/noticia/" style="background: #ff6600; color:white;" class="noticias"><i class='fa fa-newspaper-o fa-1x '></i> Noticias</button> |
+			<button onclick=location.href="<?php echo $root_html ?>destaques/noticias/" style="background: #ff6600; color:white;" class="noticias"><i class='fa fa-newspaper-o fa-1x '></i> Noticias</button> |
 			<button onclick=location.href="<?php echo $root_html ?>destaques/evento/" style="background: #ff6600; color:white;" class="eventos_destaque"><i class='fa fa-calendar-o fa-1x '></i> Eventos</button> |
 			<button onclick=location.href="<?php echo $root_html ?>destaques/publicacao/" style="background: #ff6600; color:white;" class="publicacoes"><i class='fa fa-book fa-1x '></i> Publicações</button> |
 			<button onclick=location.href="<?php echo $root_html ?>destaques/guia_do_vestibulando/" style="background: #ff6600; color:white;" class="guia_vestibulando"><i class='fa fa-graduation-cap fa-1x '></i> Guia do Vestibulando</button>
